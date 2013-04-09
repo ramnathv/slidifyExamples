@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slidio</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Slidio">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="../../libraries/highlighters/highlight.js/css/solarized_dark.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel="stylesheet" href = "../../libraries/widgets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href = "../../libraries/widgets/quiz/css/demo.css">
+<link rel="stylesheet" href = "../../libraries/widgets/opencpu/css/opencpu.css">
+<link rel="stylesheet" href = "assets/css/callouts.css">
+<link rel="stylesheet" href = "assets/css/custom.css">
+<link rel="stylesheet" href = "assets/css/draggable.css">
+<link rel="stylesheet" href = "assets/css/tabrow.css">
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script> 
+  <script data-main="../../libraries/frameworks/io2012/js/slides" 
+    src="../../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='400px' src="assets/img/slidify_biglogo.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/slidify_logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Slidio</h1>
+    <h2>Integrated Learning Environment</h2>
+    <p>Ramnath Vaidyanathan<br/>Assistant Professor, McGill</p>
+  </hgroup>
+    <a href="https://github.com/ramnathv/slidio/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="segue nobackground dark" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Probability Distributions</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Curve of Forgetting</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://uwaterloo.ca/counselling-services/sites/ca.counselling-services/files/resize/uploads/images/curve_0-500x231.gif"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Multi Text</h2>
+  </hgroup>
+  <article data-timings="">
+    
+
+<div class="quiz-text well">
+  <p>Find the following areas under the standard normal curve, in percents. Please don&#39;t enter the percent sign.</p>
+
+    <p>A. between -1.2 and 0.5</p>
+
+    <input type="text" class="quiz-answerbox" data-answer="57.63">
+    <p>B. to the right of 0.4</p>
+
+    <input type="text" class="quiz-answerbox" data-answer="0.3446">
+  <br/>
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  <div class="quiz-explanation">
+    <p>Answer</p>
+
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Learn By Doing</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>TabRow</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane" id="home">
+    <p>home</p>
+
+  </div>
+  <div class="tab-pane" id="profile">
+    <p>profile</p>
+
+  </div>
+</div>
+
+<style>
+ul.nav li:before {content: ""}
+</style>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>One Categorical Variable</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The same survey that asked 1,200 U.S. college students about their body perception also asked the following question:</p>
+
+<p>&quot;With whom do you find it easiest to make friends?&quot; (opposite sex, same sex or no difference).</p>
+
+<p>In this activity we will use the collected data to:</p>
+
+<ul>
+<li>learn how to tally our data into a table of counts and percents.</li>
+<li>learn how to produce a pie chart.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Distribution</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Let us start by creating a frequency table of the data. We will use the <code>tally</code> function in the <code>mosaic</code> package to achieve this.</p>
+
+<pre><code>x       variable name
+data    dataset name
+format  count, proportion or percent
+margins should marginal distributions be displayed?
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Ex 1.86 SAT vs. ACT</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>Eleanor scores 680 on the Mathematics part of the SAT. The distribution of SAT scores in a reference population is Normal, with mean 500 and standard deviation 100. Gerald takes the American College Testing (ACT) Mathematics test and scores 27. ACT scores are Normally distributed with mean 18 and standard deviation 6. Assuming that both tests measure the same kind of ability, who did better?</p>
+
+<ol>
+<li><em>Eleanor</em></li>
+<li>Gerald</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <p>The best way to compare their performance is to calculate their standardized scores.</p>
+
+<p>\[z_E = \frac{680 - 500}{100} = 1.8\]
+\[z_G = \frac{27 - 18}{6} = 1.5\]</p>
+
+<p>Since, Eleanor has a higher standardized score, we can conclude that Eleanor did better!</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Facebook Friends</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The number of facebook friends a person has is normally distributed with mean 190 and standard deviation 36. Answer the next three questions based on this.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Ex 1</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text well" data-answer="280">
+  <p>The number of facebook friends a person has is normally distributed with mean 190 and standard deviation 36. If the number of friends Chris has is 2.5 standard deviations above the mean, how many friends does he have?</p>
+
+<div class='source'>
+ <a href="http://www.youtu.be/cRb2ONJAvog">
+   http://www.youtu.be/cRb2ONJAvog
+ </a>
+</div>
+
+  <input type="text" class="quiz-answerbox"><br/>
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <style>
+.modal-body iframe {
+  height: 350px;
+}
+</style>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Ex 2</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text well" data-answer="5">
+  <p>Approximately _____ % of people have more than 262 facebook friends.</p>
+
+<div class='source'>
+ <a href="http://www.youtu.be/c6PzC3WZD4I">
+   http://www.youtu.be/c6PzC3WZD4I
+ </a>
+</div>
+
+  <input type="text" class="quiz-answerbox"><br/>
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>Think in terms of how many standard deviations away 262 is from 190.</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Ex 3</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text well" data-answer="16">
+  <p>Approximately _____ % of people have less than 154 facebook friends.</p>
+
+<div class='source'>
+ <a href="http://www.youtu.be/19ZQP5wzmKA">
+   http://www.youtu.be/19ZQP5wzmKA
+ </a>
+</div>
+
+  <input type="text" class="quiz-answerbox"><br/>
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  </div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Sandra Guerra Thompson, a Professor of Law and Criminal Justice and Institute Director at the University of Houston Law Center, wrote Beyond a Reasonable Doubt? Reconsidering Uncorroborated Eyewitness Identification Testimony, in 2008 in the U. C. Davis Law Review.</p>
+
+<p>This article reviews the overwhelming scientific evidence that establishes that eyewitnesses are notoriously inaccurate in identifying strangers, especially under the conditions that exist in many serious offenses such as robbery. Many of the factors that tend to decrease the accuracy of an identification are intrinsic to a witness’ abilities, and not the product of inappropriate suggestion by the police.</p>
+
+<p>We know, for example, that eyewitnesses identify a known wrong person (a “filler” or “foil”) in approximately 20% of all real criminal lineups.</p>
+
+<p>Using the data that 20% of eyewitnesses identify a known wrong person, we wish to create a probability distribution and answer some probability questions.</p>
+
+<div class='source'>
+ Source: CMU Open Learning
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># Let&#39;s look at the shape of the full model surface. 
+# expand.grid makes it easy to generate an evenly spaced 
+# grid of predictors over the entire design space.
+grid &lt;- expand.grid(
+ class = unique(mpg$class),
+ displ = seq(min(mpg$displ), max(mpg$displ), 
+ length = 20)
+)
+grid$consump &lt;- predict(mod1, newdata = grid)
+qplot(displ, consump, data = mpg) + 
+ geom_line(data = grid, colour = &quot;grey50&quot;) + 
+ facet_wrap(~ class)
+qplot(displ, resid, data = mpg) + facet_wrap(~ class)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Polling Report</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<p><span class='definition'>Did I Get?</span></p>
+
+<p>According to pollingreport.com, a poll conducted by FOX News estimated that on the issue of abortion, roughly 44% of registered voters in the United States are pro-choice, and roughly 47% are pro-life (the remaining 9% are undecided). What is the probability that two simultaneously and randomly chosen registered voters are pro-life?</p>
+
+
+<textarea rows="" style="width:95%" class='submitCompare'
+  placeholder='Type your answer (at least 140 characters)'>
+</textarea>
+<a class='btn btn-success submitCompare'>
+  Submit and Compare
+</a>
+<a class='btn btn-danger clearSubmitCompare'>Clear</a>
+
+<div class='answer' style='display: none;'>
+  <p>Let L1 be the event that person 1 is pro-life, and let L2 be the event that person 2 is pro-life. We need to find P(L1 and L2). Since the two were chosen at random, L1 and L2 are independent and we may use the Multiplication Rule for Independent Events</p>
+
+<p>\[
+\begin{aligned}
+P(L1 \cap L2) & = P(L1) \times P(L2) \\ 
+              & = 0.47 \times 0.47 \\
+              & = 0.2209
+\end{aligned}
+\]</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Linda</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-multiple well" data-individual>
+  <p>Linda is 31 years old, single, outspoken, and very bright. She majored in philosophy. As a student, she was deeply concerned with issues of discrimination and social justice, and also participated in anti-nuclear demonstrations.</p>
+
+<p>Which is more probable?</p>
+
+<ol>
+<li><em>Linda is a bank teller.</em></li>
+<li>Linda is a bank teller and is active in the feminist movement.</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <p>If you chose (2), stop back and think. Suppose we denote the event of Linda being a teller by A and the event she is active in the feminist movement by B, then probabilities in question can be written as.</p>
+
+<ul>
+<li>P(A)</li>
+<li>\(P(A \cap B)\)</li>
+</ul>
+
+<p>This is called the <a href="http://en.wikipedia.org/wiki/Conjunction_fallacy">conjugacy fallacy</a> that occurs when it is assumed that specific conditions are more probable than a single general one.</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Correlation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <p><img src=https://oli.cmu.edu/repository/webcontent/470835bf80020ca60018d5a6c359d34c/_u2_summarizing_data/_m2_examining_relationships/webcontent/linear1.gif></p>
+
+  </div>
+  <div class='span6'>
+    <div class="quiz quiz-single well new">
+      <p>Which of these two scatterplots have a higher correlation?</p>
+
+<ol>
+<li>A</li>
+<li>B</li>
+</ol>
+
+      <button class="quiz-submit btn btn-primary">Submit</button>
+      <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+      <button class="quiz-show-answer btn btn-success">Show Answer</button>
+      <button class="quiz-clear btn btn-danger">Clear</button>
+      
+      <div class="quiz-explanation">
+  <p>Both have the same correlation.</p>
+
+</div>
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Smoke Alarms</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>A homeowner has two smoke detector alarms installed, one in the dining room (adjacent to the kitchen) and one in an upstairs bedroom (above the kitchen). If cooking produces smoke in the kitchen, the probability of setting off the dining room alarm (D) is 0.5. The probability of setting off the bedroom alarm (B) is 0.4. The two alarms detect smoke independently of each other. If there is smoke in the kitchen, what is the probability that the smoke will be detected and will set off an alarm?</p>
+
+<ol>
+<li>0.9</li>
+<li>0.2</li>
+<li><em>0.7</em></li>
+<li>0.5</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <h2>Solution</h2>
+
+<p>Let&#39;s first understand what the probability is that we need to find: The smoke from the fire is detected if it sets off the dining room alarm (D) or the bedroom alarm (B) or both, and therefore P(smoke is detected) = P(D or B), which is the probability we need to find.</p>
+
+<p>To that end, we are given a few pieces of information. Let&#39;s summarize them:</p>
+
+<ul>
+<li>P(D) = 0.95</li>
+<li>P(B) = 0.40</li>
+</ul>
+
+<p>Hence, we can use the general addition rule and write</p>
+
+<p>P(D or B) = P(D) + P(B) - P(D)*P(B)</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Question 1</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<p>What is the sample space for this experiment?</p>
+
+
+<textarea rows="" style="width:95%" class='submitCompare'
+  placeholder='Type your answer (at least 140 characters)'>
+</textarea>
+<a class='btn btn-success submitCompare'>
+  Submit and Compare
+</a>
+<a class='btn btn-danger clearSubmitCompare'>Clear</a>
+
+<div class='answer' style='display: none;'>
+  <p>The sample space for this experiment is</p>
+
+<p>{HH, HT, TH, HH}</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Question 2</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm7">
+      <p>We can create a scatterplot using the <code>xyplot</code> function in the <code>lattice</code> package. Click the <i icon-run></i> button to run the code.</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+require(lattice)
+xyplot(mpg ~ wt, data = mtcars, pch = 16)
+
+</textarea></div>
+
+<p class='build'>
+From the scatterplot, we observe a strong, negative, linear relationship between the variables.
+</p>
+
+      <div id='aceeditor7'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn7" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest7" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a id="clear7" class='btn btn-small knitClear' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult7" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Question 3</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A researcher wished to compare the average daily hotel room rates between San Francisco and Los Angeles. The researcher obtained an SRS of 27 hotels in downtown San Francisco and found the sample mean to be \$156, and a standard deviation of \$18. The researcher also obtained an independent SRS of 24 hotels in downtown Los Angeles and found the sample mean to be \$143, with a standard deviation of \$10.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Binomial Coefficient</h2>
+  </hgroup>
+  <article data-timings="">
+    <div class='well'>
+<p>The number of ways of arranging k successes among n observations is given by the binomial coefficient $${n \choose k} = \frac{n!}{(n - k)!}$$</p>
+</div>
+
+<p>You can use the <code>factorial</code> function in R to compute this coefficient using the formula. An easier way to achieve the same is to directly use the <code>choose</code> function.</p>
+
+<pre><code class="r">choose(5, 3)
+## [1] 10
+factorial(5)/(factorial(3)*factorial(2))
+## [1] 10
+</code></pre>
+
+<div class='alert alert-error'>
+<p><b>Ex:</b> Use the <code>choose</code> function to compute $6 \choose 3$</p>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Normal Approximation to Binomial</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Suppose \(X \sim Bin(n, p)\) follows a binomial distribution with <code>n</code> trials and success probability <code>p</code>. For large values of <code>n</code>, we can approximate the distribution of \(X\) using a normal distribution.</p>
+
+<p>\[X \sim N(\mu = np, \sigma = \sqrt{np(1-p)})\]</p>
+
+<div class='alert alert-success'><p>
+<b>Tip</b>: This is especially useful while calculating cumulative probabilities such as $P(X \le x)$, since you can use the standard normal table instead of summing up the binomial probabilities over values 0 through x.
+</p></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>You ask an SRS of 200 adults if they are concerned about nutrition when eating away from home. Let \(X\) represent the total count of people responding &quot;Yes&quot;. If the national proportion \(p = 0.4\) holds in your area, what is the probability that \(X\) lies between 75 and 85?</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Solution</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We can approximate the distribution of \(X\) using a normal distribution with mean \(\mu = np\) and standard deviation \(\sigma = np(1-p)\).</p>
+
+<p>We can do all the computations using R, as shown below.</p>
+
+<pre><code class="r">n = 200; p = 0.4
+mu = n * p
+sigma = sqrt(n * p * (1 - p))
+pnorm(85, mu, sigma) - pnorm(75, mu, sigma)
+## [1] 0.5295
+</code></pre>
+
+<p>You can visualize the probabilities <a href="http://www.statdistributions.com/normal?z=85&amp;mean=80&amp;sd=6.928&amp;tail=3">here</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Binomial Setting</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>To identify, if a setting fits the binomial distribution, you need to verify four things.</p>
+
+<ol>
+<li>Does every trial have two outcomes?</li>
+<li>Do we have a fixed number of trials?</li>
+<li>Are the trials independent?</li>
+<li>Is the probability of success constant across all trials?</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>State Hypotheses</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Let \(\mu_{LA}\) and \(\mu_{SF}\) represent the average daily hotel room rates for the two cities. The null hypothesis is that there is no difference between the average rates for these two cities, while the alternate hypothesis is that there is a difference. Accordingly,</p>
+
+<p>\[
+\begin{aligned}
+H_0: \mu_{LA} - \mu_{SF} & = 0 \\
+H_a: \mu_{LA} - \mu_{SF} & \neq 0 \\
+\end{aligned}
+\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28">
+<hgroup>
+  <h2>The 68 - 95 - 99.7 Rule</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img class='center'
+  src=http://www.paly.net/sfriedland/apstatnotes/chapter2/EmpiricalRule.png>
+</img></p>
+
+</article>
+<!-- Presenter Notes -->
+<aside class="note">
+  <section>
+    <p>This rule states that approximately 68% / 95% / 99% of the observations from a normal distribution will fall within one / two / three standard deviations of the mean. </p>
+
+  </section>
+</aside>
+</slide>
+<slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>Check</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <ol>
+<li>Question 1</li>
+<li>Question 2</li>
+<li>Question 3</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  </div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>Ex 1.83 Young Mens Heights</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p><span class='example'>Example</span></p>
+
+<p>The distribution of heights of young men is approximately Normal with mean 69 and standard deviation 2.5 inches. Use the 68 - 95 - 99.7 rule to determine the following.</p>
+
+<ol>
+<li>What percent of these men are taller than 74 inches?</li>
+<li>Between what heights do the middle 95% of young men fall?</li>
+<li>What percent of young men are shorter than 66.5 inches?</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <p><strong>Solution</strong></p>
+
+<p><img class='center' width='60%'
+  src=http://www.paly.net/sfriedland/apstatnotes/chapter2/EmpiricalRule.png>
+</img></p>
+
+<ol>
+<li>74 is 2 sd&#39;s away from 69. Hence, 2.5% of young men are taller than 74.</li>
+<li>Roughly 95% of young men should have heights between \(69 \pm 2 \times 2.5\)</li>
+<li>66.5 is one sd to the left of the mean. Hence, 16% of the young men are shorter than 66.5 inches.</li>
+</ol>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Ex 1.34 NCAA Partial Qualifiers</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The NCAA considers a student a &quot;partial qualifier&quot; eligible to practice and receive an athletic scholarship, but not compete, if the combined SAT score is at least 720. What proportion of all students who take the SAT would be partial qualifiers?</p>
+
+<p><img src="assets/fig/ncaa.png" alt="ncaa"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p><strong>Solution</strong></p>
+
+<p>We need to calculate the proportion of SAT scores falling between 720 and 820. </p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>Ex 1.114 Length of Pregnancies</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p>The length of human pregnancies from conception to birth varies according to a distribution that is approximately Normal with mean 266 days and standard deviation 16 days.</p>
+
+<ol>
+<li>What percent of pregnancies last fewer than 240 days?</li>
+<li>What percent of pregnancies last between 240 and 270 days?</li>
+<li>How long do the longest 25% pregnancies last?</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <ol>
+<li><span class='answer'>5.2081</span></li>
+<li><span class='answer'>54.6625</span></li>
+<li><span class='answer'>276.7918</span></li>
+</ol>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>Normal Distributions</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p>A distribution of test scores is approximately normal with mean 65 and SD 10. Approximate (please don&#39;t enter units):</p>
+
+<ol>
+<li>The percent of scores between 50 and 70:</li>
+<li>The 75th percentile of the scores:</li>
+<li>The interquartile range of the scores</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <p>We can compute the answers using R.</p>
+
+<p>A. The percent of scores between 50 and 70 is given by</p>
+
+<pre><code class="r">p70 = pnorm(70, mean = 65, sd = 10) 
+p50 = pnorm(50, mean = 65, sd = 10)
+p70 - p50
+## [1] 0.6247
+</code></pre>
+
+<p>B. The 75th percentile of scores is given by</p>
+
+<pre><code class="r">qnorm(p = 0.75, mean = 65, sd = 10)
+## [1] 71.74
+</code></pre>
+
+<p>C. The interquartile range of the scores can be found to be</p>
+
+<pre><code class="r">Q3 = qnorm(0.75, mean = 65, sd = 10)
+Q1 = qnorm(0.25, mean = 65, sd = 10)
+Q3 - Q1
+## [1] 13.49
+</code></pre>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="highway" style="background:;">
+  <hgroup>
+    <h2>Highway Signs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A Pennsylvania research rm conducted a study in which 30 drivers (of ages
+18 to 82 years old) were sampled, and for each one, the maximum distance (in
+feet) at which he/she could read a newly designed sign was determined. The
+goal of this study was to explore the relationship between a driver&#39;s age and the
+maximum distance at which signs were legible, and then use the study&#39;s findings
+to improve safety for older drivers.</p>
+
+<!-- html table generated in R 2.15.2 by xtable 1.7-1 package -->
+
+<!-- Thu Mar 21 08:41:57 2013 -->
+
+<TABLE class=table-half>
+<TR> <TH> Age </TH> <TH> Distance </TH>  </TR>
+  <TR> <TD align="right">  18 </TD> <TD align="right"> 510 </TD> </TR>
+  <TR> <TD align="right">  20 </TD> <TD align="right"> 590 </TD> </TR>
+  <TR> <TD align="right">  22 </TD> <TD align="right"> 560 </TD> </TR>
+  <TR> <TD align="right">  23 </TD> <TD align="right"> 510 </TD> </TR>
+  <TR> <TD align="right">  23 </TD> <TD align="right"> 460 </TD> </TR>
+  <TR> <TD align="right">  25 </TD> <TD align="right"> 490 </TD> </TR>
+   </TABLE>
+
+<style>
+#highway table {
+  width: 50%;
+  margin: auto auto;
+}
+</style>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>OkCupid</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <p>The solid curve represents the distribution of heights of all males in the US. The dotted curve represents the distribution of heights reported by males on OkCupid, an online dating website.</p>
+
+<p><img class=center
+  src=http://cdn.okcimg.com/blog/lies/MaleHeightDistribution.png width=400px></p>
+
+  </div>
+  <div class='span6'>
+    <p>What is happening here?</p>
+
+    <textarea rows="5" style="width:95%" class='submitCompare'
+      placeholder='Type your answer (at least 140 characters)'>
+</textarea>
+    <a class='btn btn-success submitCompare' data-title='<p>It is easier to interpret things if we overlay a fitted normal distribution for the heights reported by males on OkCupid. Looking at the graph carefully, we can observe two things.</p>
+
+<p><img class=center
+  src=http://cdn.okcimg.com/blog/lies/MaleHeightDistributionYoink.png width=400px></p>
+
+<ol>
+<li>Males on OkCupid probably tend to inflate their heights!</li>
+<li>You can also see a more subtle vanity at work: starting at roughly 5&#39; 8&quot;, the top of the dotted curve tilts even further rightward. This means that guys as they get closer to six feet round up a bit more than usual, stretching for that coveted psychological benchmark.</li>
+</ol>
+'>
+      Submit and Compare
+    </a>
+    <a class='btn btn-danger clearSubmitCompare'>Clear</a>
+    <div class="answer" style="display:none;">
+      <p>It is easier to interpret things if we overlay a fitted normal distribution for the heights reported by males on OkCupid. Looking at the graph carefully, we can observe two things.</p>
+
+<p><img class=center
+  src=http://cdn.okcimg.com/blog/lies/MaleHeightDistributionYoink.png width=400px></p>
+
+<ol>
+<li>Males on OkCupid probably tend to inflate their heights!</li>
+<li>You can also see a more subtle vanity at work: starting at roughly 5&#39; 8&quot;, the top of the dotted curve tilts even further rightward. This means that guys as they get closer to six feet round up a bit more than usual, stretching for that coveted psychological benchmark.</li>
+</ol>
+
+    </div>
+  </div>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Distance vs. Age</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <p><img src="assets/fig/unnamed-chunk-12.svg" alt="plot of chunk unnamed-chunk-12"> </p>
+
+  </div>
+  <div class='span6'>
+    <p>Describe the relationship!</p>
+
+    <textarea rows="6" style="width:95%" class='submitCompare'
+      placeholder='Type your answer (at least 140 characters)'>
+</textarea>
+    <a class='btn btn-success submitCompare' data-title='<p><strong>Direction</strong> : The direction of the relationship is <code>negative</code>, which makes sense in context, since as you get older your eyesight weakens, and in particular older drivers tend to be able to read signs only at lesser distances. A line drawn over the scatterplot illustrates the negative direction of this relationship.</p>
+
+<p><strong>Form</strong> : The form of the relationship seems to be <code>linear</code>. Notice how the points tend to be scattered about the line. </p>
+
+<p><strong>Strength</strong>: Although, as we mentioned earlier, it is problematic to assess the strength without a numerical measure, the relationship appears to be moderately strong, as the data is fairly tightly scattered about the line.</p>
+
+<p><strong>Deviations</strong>: Finally, all the data points seem to &quot;obey&quot; the pattern, there do not appear
+to be any outliers.</p>
+'>
+      Submit and Compare
+    </a>
+    <a class='btn btn-danger clearSubmitCompare'>Clear</a>
+    <div class="answer" style="display:none;">
+      <p><strong>Direction</strong> : The direction of the relationship is <code>negative</code>, which makes sense in context, since as you get older your eyesight weakens, and in particular older drivers tend to be able to read signs only at lesser distances. A line drawn over the scatterplot illustrates the negative direction of this relationship.</p>
+
+<p><strong>Form</strong> : The form of the relationship seems to be <code>linear</code>. Notice how the points tend to be scattered about the line. </p>
+
+<p><strong>Strength</strong>: Although, as we mentioned earlier, it is problematic to assess the strength without a numerical measure, the relationship appears to be moderately strong, as the data is fairly tightly scattered about the line.</p>
+
+<p><strong>Deviations</strong>: Finally, all the data points seem to &quot;obey&quot; the pattern, there do not appear
+to be any outliers.</p>
+
+    </div>
+  </div>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Form</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The form of the relationship is its general shape. When identifying the form, we try to find the simplest way to describe the shape of the scatterplot. There are many possible forms. Here are a couple that are quite common:</p>
+
+<div class='build center'>
+  <img src='http://goo.gl/bWpcK' width='30%'>
+  <img src='http://goo.gl/UVUqr' width='30%'>
+  <img src='http://goo.gl/Sk53x' width='30%'>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Question 6.2</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The medical director of a large company is concerned about the effects of stress on the company’s younger executives. According to the National Center for Health Statistics, the mean systolic blood pressure for males 35 to 44 years of age is 128 and the standard deviation in this population is 15. The medical director examines the records of 72 executives in this age group and finds that their mean systolic blood pressure is 129.93. Is this evidence that the mean blood pressure for all the company’s young male executives is higher than the national average? Use \(\alpha = 0.05\).</p>
+
+<p><strong>Given</strong></p>
+
+<ul class = "build incremental">
+<li>\(\bar{x} = 129.93\)</li>
+<li>\(\sigma = 15\)</li>
+<li>\(n = 72\)</li>
+<li>\(\mu_0 = 128\)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-39" style="background:;">
+  <hgroup>
+    <h2>Step 1. State Hypothesis</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The medical director is interested in evidence that supports his hypothesis that the mean blood pressure for the company&#39;s male executives is higher than the national average (which is 128). Hence, this would be the alternate hypothesis.</p>
+
+<p>\[\begin{aligned}
+H_0: \mu & = 128 \\
+H_a: \mu & > 128 \\
+\end{aligned}\]</p>
+
+<div class='alert alert-success'><p>
+<b>Tip: </b> Always start by writing the alternate hypothesis first. Remember that the way hypothesis testing is set up, the statement you want to support should be cast as the alternate hypothesis. The NULL hypothesis can NEVER be proved!
+</p></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="mytable" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <style>
+#mytable table {
+  width: 60%;
+  margin: auto auto;
+}
+#mytable td,
+#mytable th{
+ font-size: 1.2em;
+ line-height: 1.6em;
+}
+</style>
+
+<h2>Step 2. Identify Test Statistic</h2>
+
+<p>We are testing a hypothesis about a single mean. Moreover, we DONT know the standard deviation of the population. Hence, we use a <strong>1-sample t-test</strong> with \(T \sim t(df = n - 1)\).</p>
+
+<table><thead>
+<tr>
+<th>Description</th>
+<th>Formula</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Parameter</td>
+<td>\(\mu\)</td>
+<td></td>
+</tr>
+<tr>
+<td>Statistic</td>
+<td>\(\bar{x}\)</td>
+<td></td>
+</tr>
+<tr>
+<td>Std.Error</td>
+<td>\(\frac{s}{\sqrt{n}}\)</td>
+<td></td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-41" style="background:;">
+  <hgroup>
+    <h2>Boxplots</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Below is a boxplot of yearly income by marital status for individuals in the United States.</p>
+
+<p><img src="assets/fig/box1.png" title="plot of chunk box1" alt="plot of chunk box1" class=center /></p>
+
+<p>Click <code>p</code> to see the R code used to create the plot.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="r">library(ElemStatLearn)
+data(marketing)
+boxplot(marketing$Income ~ marketing$Marital,
+    col=&quot;grey&quot;,xaxt=&quot;n&quot;,ylab=&quot;Income&quot;,xlab=&quot;&quot;)
+axis(side=1,at=1:5, labels=c(&quot;Married&quot;,&quot;Living together/not married&quot;,
+  &quot;Divorced or separated&quot;,&quot;Widowed&quot;,&quot;Nevermarried&quot;),las=2)
+</code></pre>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="small" id="slide-42" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-multiple well" data-individual>
+  <p>Which of the following can you conclude from the plot? (Check all that apply)</p>
+
+<ol>
+<li><em>The 25th percentile of the income for married individuals is almost the same as the median for individuals living together but not married.</em></li>
+<li>The medians for all individuals who are not currently married are almost the same.</li>
+<li>There are more individuals who are widowed than divorced in this data set.</li>
+<li>There are more individuals who were never married than divorced in this data set.</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  </div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-43" style="background:;">
+  <hgroup>
+    <h2>Learning Environments</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Slides</li>
+<li>Screencasts</li>
+<li>Slidecasts</li>
+<li>Integrated</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-44" style="background:;">
+  <hgroup>
+    <h2>Slides</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+ <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm0">
+<div class='span4'>
+  <div><textarea class='knitCode' style='display:none;'>
+# install ggplot2 if you have not done it already
+# install.packages('ggplot2')
+library(ggplot2)
+qplot(wt, mpg, data = mtcars)
+
+</textarea></div>
+
+</div>
+<div class='span8'>
+    <div id='aceeditor0'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary knitBtn" id="knitBtn0">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a class="btn btn-disabled knitTest" id="knitTest0">
+        <i class="icon-check"></i> Check
+      </a>
+      <a id="clear0" class='btn btn-danger knitClear'>
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' title="">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+    <br/>
+  <div id="knitResult0" class='wordwrap'></div>
+</div>
+</form>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>The first environment we will consider is the ubiqutous slide deck, without which no class, online or offline is considered complete. Slide decks serve dual roles, first as a synchronous teaching aid in class that helps anchor a lecture, and second as an asynchronous record of what was taught, allowing students to revisit the contents later. </p>
+
+<p>Here is how an introductory slide on a <code>ggplot2</code> tutorial might look like. It shows the user how to install ggplot2 and construct a simple scatterplot, along with the output produced.  </p>
+
+<p>Now, this would work great in a classroom environment with an instructor lecturing along. However as a standalone, it falls short. This concern can be partly alleviated by adding more prose to the slide itself or sharing the extra material as speaker notes. However, it is still not efficient.</p>
+
+<p>A second issue with this approach is that to follow along, a student would need to copy the code from the slide, paste it into their code editor, run the code to see the results and then return back to the slide deck. I believe a lot of back and forth between slides and a code editor is highly distracting to the learning process. </p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="fill" id="slide-45" style="background:;">
+  <hgroup>
+    <h2>Screencasts</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe width="960" height="720" 
+  src="http://www.youtube.com/embed/TagaAeIHKks" frameborder="0" allowfullscreen>
+</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>The second environment we will look at is the use of screencasts, which have become increasingly popular</p>
+
+<p>A screencast allows an instructor to record a full demo of the lesson, thereby providing students with a more personalized learning experience. However, a serious shortcoming with screencasts is that students cannot click through links or copy-paste code from the video. So they must be supplemented with slides or a file containing all the code.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-46" style="background:;">
+  <hgroup>
+    <h2>Slidecasts</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>The next environment we will review is audio/video synced with slides. In fact, if you have not realized it already, this presentation so far has been an audio synced slideshow. If you are not convinced, try copying some text from the screen.</p>
+
+<p>Audio/Video synced slideshows are a great step forward towards the ideal learning environment. They combine the advantages of slides and screecasts. Several popular services like <a href="http://www.slideshare.com">Slideshare</a> already allow users to create synced presentations.</p>
+
+<p>So what is the problem. Well, these presentations are still static. What if you want to embed interactive content that a student can explore?</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="segue dark nobackground" id="slide-47" style="background:;">
+  <hgroup>
+    <h2>Integrated Learning Environment</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>Now, I will get into what an integrated learning environment can provide.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-48" style="background:;">
+  <hgroup>
+    <h2>Execute Code</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm1">
+      <p>Let us start by creating a simple scatterplot. We use the <code>qplot</code> (quick plot) function and pass it the x and y variables along with the data.</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+require(ggplot2)
+qplot(x = wt, y = mpg, data = mtcars)
+
+## your turn
+
+
+</textarea></div>
+
+      <div id='aceeditor1'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn1" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest1" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a id="clear1" class='btn btn-small knitClear' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;p&gt;This is a hint&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;qplot(wt, mpg, data = mtcars)
+&lt;/code&gt;&lt;/pre&gt;
+">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+        <div class='build'>
+    <div class='alert alert-info'>
+      <p>Modify the code to create a scatterplot of <code>disp</code> vs <code>hp</code>.</p>
+
+    </div>
+  </div>
+</div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult1" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-49" style="background:;">
+  <hgroup>
+    <h2>Answer Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>Consider the assignment <code>x &lt;- c(&#39;alpha&#39;, TRUE, 1)</code>. What would be the <code>class</code> of <code>x</code>?</p>
+
+<ol>
+<li><em>character</em></li>
+<li>numeric</li>
+<li>logical</li>
+<li>mixed</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>A vector is a collection of items of the same type!</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>A vector is a collection of items of the same type. Since, <code>x</code> consists of items of different types, R does what is called <em>type coercion</em> and converts everything to a character.</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-50" style="background:;">
+  <hgroup>
+    <h2>Stemplots</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">x &lt;- rnorm(100)
+stem(x)
+  The decimal point is at the |
+
+  -2 | 3
+  -1 | 9665421110000
+  -0 | 9988877776666665544444433332221111111
+   0 | 011123344555555555777777888999
+   1 | 0000012334566789
+   2 | 269
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-51" style="background:;">
+  <hgroup>
+    <h2>Percentile</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The nth percentile of an observation variable is the value that cuts off the first n percent of the data values when it is sorted in ascending order.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Find the 32nd, 57th and 98th percentiles of the eruption durations in the data set <code>faithful</code>.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>We use the <code>quantile</code> function to compute the percentiles of eruptions with the desired percentage ratios.</p>
+
+<pre><code class="r">&gt; quantile(faithful$eruptions, c(0.32, 0.57, 0.98))
+##   32%   57%   98% 
+## 2.395 4.133 4.933
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-52" style="background:lightblue;">
+  <hgroup>
+    <h2>Exercise</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm2">
+      <p>Find the 17th, 43rd, 67th and 85th percentiles of the eruption waiting periods in faithful.</p>
+
+<div><textarea class='knitCode'></textarea></div>
+
+      <div id='aceeditor2'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn2" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest2" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a id="clear2" class='btn btn-small knitClear' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;quantile(faithful$waiting, c(0.17, 0.43, 0.67, 0.85))
+## 17% 43% 67% 85% 
+##  54  73  80  84
+&lt;/code&gt;&lt;/pre&gt;
+">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult2" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-53" style="background:;">
+  <hgroup>
+    <h2>Interquartile Range</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The interquartile range of an observation variable is the difference of its upper and lower quartiles. It is a measure of how far apart the middle portion of data spreads in value.</p>
+
+<p><img src="http://sph.bu.edu/otlt/MPH-Modules/BS/BS704_SummarizingData/Interquartile-Even.png" alt="IQR"></p>
+
+<div class='source'>
+Source: <a href=http://sph.bu.edu/otlt/MPH-Modules/BS/BS704_SummarizingData/BS704_SummarizingData7.html>Boston University</a>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-54" style="background:;">
+  <hgroup>
+    <h2>Interquartile Range</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We can use the <code>IQR</code> function to compute the interquartile range of a variable <code>x</code>.</p>
+
+<pre><code class="r">&gt; x &lt;- c(62, 63, 64, 70, 72, 76, 77, 81, 81)
+&gt; IQR(x)
+## [1] 13
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-55" style="background:lightgreen;">
+  <hgroup>
+    <h2>Exercise</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm3">
+      <p>Find the interquartile range of eruption waiting periods in faithful.</p>
+
+<div><textarea class='knitCode'></textarea></div>
+
+      <div id='aceeditor3'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn3" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest3" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a id="clear3" class='btn btn-small knitClear' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;IQR(faithful$waiting)
+## [1] 24
+&lt;/code&gt;&lt;/pre&gt;
+">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult3" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-56" style="background:;">
+  <hgroup>
+    <h2>Histogram</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/hist1.png" title="plot of chunk hist1" alt="plot of chunk hist1" class="center" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>A <code>histogram</code> consists of vertical bars that graphically shows the frequency distribution of a quantitative variable. The area of each bar is equal to the frequency of items found in each class. You can draw a histogram using the <code>histogram</code> function in the <code>lattice</code> package.</p>
+
+<pre><code class="r">require(lattice)
+histogram(~ mpg, data = mtcars)
+</code></pre>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-57" style="background:;">
+  <hgroup>
+    <h2>Histograms</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm4">
+      <p>The <code>histogram</code> function accepts two other arguments <code>breaks</code> and <code>color</code> which allow you to customize the graph. Experiment with the two arguments.</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+require(lattice)
+# fill the color of your choice
+mycolor =         
+histogram(~ mpg, data = mtcars, col = mycolor)
+
+</textarea></div>
+
+      <div id='aceeditor4'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn4" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest4" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a id="clear4" class='btn btn-small knitClear' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult4" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-58">
+<hgroup>
+  <h2>Boxplot</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="http://web.pdx.edu/%7Estipakb/download/PA551/boxplot_files/boxplot5.jpg" alt="boxplot" title="What is a boxplot?"></p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-59" style="background:;">
+  <hgroup>
+    <h2>Boxplot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>It is easy to draw a boxplot in R using the <code>bwplot</code> function in the <code>lattice</code> package. Let us draw a boxplot of the variable <code>mpg</code> in the data set <code>mtcars</code>.</p>
+
+<pre><code class="r">bwplot(~ mpg, data = mtcars)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-21.png" title="plot of chunk unnamed-chunk-21" alt="plot of chunk unnamed-chunk-21" class=center /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-60" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm5">
+      <p>Construct a boxplot of <code>wt</code> from the dataset <code>mtcars</code>. What can you conclude about the distribution of weights based on the plot?</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+## enter your code
+require(lattice)
+
+</textarea></div>
+
+      <div id='aceeditor5'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn5" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest5" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a id="clear5" class='btn btn-small knitClear' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;p&gt;The reason my plots were prettier, is because I used another R package &lt;code&gt;latticeExtra&lt;/code&gt; that allows customizing plots to appear like those in the economist. If you want your plots to appear like mine, add the following lines to your R code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;# load latticeExtra 
+require(latticeExtra)
+# set theme and options according to the Economist
+trellis.par.set(theme = theEconomist.theme(
+  with.bg = TRUE, box = &amp;#39;transparent&amp;#39;)
+)
+lattice.options(theEconomist.opts())
+&lt;/code&gt;&lt;/pre&gt;
+">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult5" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-61" style="background:;">
+  <hgroup>
+    <h2>Draggable</h2>
+  </hgroup>
+  <article data-timings="">
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+<p><link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" /></p>
+
+<style>
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+#draggable {
+position: relative;
+left: 158px;
+top: 55px;
+}
+</style>
+
+<script>
+  $(function() {
+    $("#draggable").draggable()
+  .click(function() {
+    $(this).draggable({ disabled: false });
+}).dblclick(function() {
+    $(this).draggable({ disabled: true });
+});
+  });
+</script>
+
+<div id="draggable" class="ui-widget-content">
+  <p contenteditable="true">Drag me around</p>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="genmult" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <style>
+#genmult {
+  font-size: 3em;
+  color: "darkbrown";
+}
+</style>
+
+<h2>General Multiplication Rule</h2>
+
+<div class='vcenter'>
+$$P(A \cap B) = P(A) \times P(B \mid A) $$
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>The general multiplication rule extends the multiplication rule for the joint probability of two independent events. It states that the probability that events A and B both happen is the probability that one of them happens, P(A) multiplied by the probability that the other event happens, conditional on the first one happening, i.e. P(B | A). This rule follows directly from the definition of conditional probability, which states that P(A | B) = P(A and B)/P(B).</p>
+
+<p>This rule can be used in two different ways.  </p>
+
+<ol>
+<li>It can be used to compute the probability of two events happening together.</li>
+<li>It can be used to verify that two events are independent. Note that if two events are independent, then P(A and B) = P(A) x P(B). Comparing this equation with the general multiplication rule, we get that P(A | B) = P(A). This equation is often used to verify if two events are independent.</li>
+</ol>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-63" style="background:;">
+  <hgroup>
+    <h2>Question</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-multiple well" data-individual>
+  <p>If two events A and B are independent, which of the following are TRUE?</p>
+
+<ol>
+<li>P(A | B) = P(A and B)</li>
+<li><em>P(A | B) = P(A)</em></li>
+<li>P(A | B) = P(B)</li>
+<li>P(A | B) = 0</li>
+<li><em>P(A and B) = P(A) x P(B)</em></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  </div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue nobackground dark" id="slide-64" style="background:;">
+  <hgroup>
+    <h2>Finding Help</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-65" style="background:;">
+  <hgroup>
+    <h2>RSeek</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src=http://www.rseek.org/></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-66" style="background:;">
+  <hgroup>
+    <h2>Split-Apply-Combine</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img width='500px'
+  src=http://inundata.org/R_talks/meetup/images/splitapply.png class=center>
+</img></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>Split-Apply-Combine is a very useful design pattern that abstracts many common exploratory analyses. Let me illustrate it with a simple example. Suppose we have a data set with two columns <code>x</code> and <code>y</code>. We are interested in creating a summary of this data set by calculating the mean value of <code>y</code> by <code>x</code>. Here is one way to go about such a problem.</p>
+
+<ol>
+<li>Split the data frame by values of <code>x</code>.</li>
+<li>Apply mean calculations for each piece.</li>
+<li>Combine the pieces together into a data frame.</li>
+</ol>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-67" style="background:lightblue;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm6">
+      <p>In this exercise, we will use a toy example to get used to using R as a calculator and writing functions. It&#39;s your birthday and you and five friends have gone for a meal at Pizza Express. You have had a full three course meal including the following items:</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+# enter your code here
+
+</textarea></div>
+
+      <div id='aceeditor6'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn6" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest6" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a id="clear6" class='btn btn-small knitClear' data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult6" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-68" style="background:;">
+  <hgroup>
+    <h2>Exercise</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="fill nobackground" id="slide-69" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <iframe src=http://rstudio-pubs-static.s3.amazonaws.com/1496_2d40899c7504475da7ffc178910e91d4.html></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<p><section class="video" id="video">
+  <div id="player" style="width: 160px; height: 120px"></div>
+</section></p>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Probability Distributions'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Curve of Forgetting'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Multi Text'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Learn By Doing'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='TabRow'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='One Categorical Variable'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Distribution'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Ex 1.86 SAT vs. ACT'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Facebook Friends'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Ex 1'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Ex 2'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Ex 3'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Background'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title=''>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Polling Report'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Linda'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Correlation'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Smoke Alarms'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Question 1'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Question 2'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Question 3'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Binomial Coefficient'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Normal Approximation to Binomial'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Problem'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Solution'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Binomial Setting'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='State Hypotheses'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='The 68 - 95 - 99.7 Rule'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Check'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Ex 1.83 Young Mens Heights'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Ex 1.34 NCAA Partial Qualifiers'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Ex 1.114 Length of Pregnancies'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Normal Distributions'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Highway Signs'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='OkCupid'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Distance vs. Age'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Form'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Question 6.2'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='Step 1. State Hypothesis'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title=''>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='Boxplots'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title=''>
+         42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='Learning Environments'>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='Slides'>
+         44
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='Screencasts'>
+         45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='Slidecasts'>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='Integrated Learning Environment'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='Execute Code'>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='Answer Quiz'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='Stemplots'>
+         50
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='Percentile'>
+         51
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=52 title='Exercise'>
+         52
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=53 title='Interquartile Range'>
+         53
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=54 title='Interquartile Range'>
+         54
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=55 title='Exercise'>
+         55
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=56 title='Histogram'>
+         56
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=57 title='Histograms'>
+         57
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=58 title='Boxplot'>
+         58
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=59 title='Boxplot'>
+         59
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=60 title=''>
+         60
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=61 title='Draggable'>
+         61
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=62 title=''>
+         62
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=63 title='Question'>
+         63
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=64 title='Finding Help'>
+         64
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=65 title='RSeek'>
+         65
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=66 title='Split-Apply-Combine'>
+         66
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=67 title=''>
+         67
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=68 title='Exercise'>
+         68
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=69 title=''>
+         69
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=70 title=''>
+         70
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script src='../../libraries/widgets/bootstrap/js/bootstrap.min.js'></script>
+<script src="../../libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script>  
+$(function (){ 
+  $("#example").popover(); 
+  $("[rel='tooltip']").tooltip(); 
+});
+</script>  
+<script src='../../libraries/widgets/quiz/js/jquery.quiz.js'></script>
+<script src='../../libraries/widgets/quiz/js/mustache.min.js'></script>
+<script src='../../libraries/widgets/quiz/js/quiz-app.js'></script>
+
+<script type='text/javascript' src='../../libraries/widgets/ace/js/ace.js'></script>
+<script type='text/javascript' src='../../libraries/widgets/opencpu/js/opencpu.js'></script>
+
+<script src="../../libraries/widgets/popcornjs/js/popcorn-complete.min.js"></script>
+<script src="../../libraries/widgets/popcornjs/js/popcorn-custom.js"></script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="../../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+
+<script>
+$(document).ready(function(){
+  // $("pre:has(code)").addClass('build');
+  // $("p:has(img)").addClass('build')
+  // var pop = Popcorn.vimeo("player", "http://player.vimeo.com/video/41823197");
+  // var mytimings = [{"slide":1,"time":1361386121505},{"time":15660,"slide":2,"action":"gotoSlide"},{"time":67211,"slide":3,"action":"gotoSlide"},{"time":71362,"slide":3,"action":"nextSlide"},{"time":81665,"slide":3,"action":"nextSlide"},{"time":92802,"slide":3,"action":"nextSlide"},{"time":100178,"slide":3,"action":"nextSlide"}] ;
+  // syncSlides(mytimings, pop);
+  $('.pagination li a').live('click', function(){
+    var i = $(this).data('slide');
+    window.slidedeck.gotoSlide(i+1);
+  });
+});
+</script>
+
+<script src='https://grockit.com/answers/scripts/grockitize.js' id='link_grockitizer'>
+</script>
+<script>g('c655d8cb2');</script></html>

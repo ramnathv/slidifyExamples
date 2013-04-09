@@ -1,0 +1,30 @@
+---
+layout: slide
+---
+
+<div class='row-fluid'>
+<div class='span5'>
+  <form>
+    {{{ slide.content }}}
+    <div id="aceeditor{{slide.sno}}"></div>
+    <br/>
+    <div class='opencpu'>
+        <a class="btn btn-primary action-button" id="run{{slide.sno}}">
+          <i class="icon-play icon-white"></i> Run
+        </a>
+        <a class="btn btn-disabled knitTest" id="knitTest{{slide.sno}}">
+          <i class="icon-check"></i> Check
+        </a>
+        <a id="clear{{slide.sno}}" class='btn btn-danger'>
+          <i class="icon-remove icon-white"></i> Clear
+        </a>
+        <a class='hint btn btn-success' title="{{slide.hint.html}}">
+          <i class="icon-bookmark icon-white"></i> Hint
+        </a>
+      </div>
+  </form>
+</div>
+<div class='span7'>
+  <div id="result{{slide.sno}}" class="shiny-html-output"></div>
+</div>
+</div>

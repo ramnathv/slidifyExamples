@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<head>
+  {{> head }}
+  {{ page.stylesheets }}
+</head>
+<body>
+  <div class="flowtime">
+    {{{ page.content }}}
+  </div>
+</body>
+  <script src="{{page.url.framework}}/js/brav1toolbox.js"></script>
+  <script src="{{page.url.framework}}/js/flowtime.js"></script>
+	<script src="{{page.url.framework}}/assets/js/prism.js"></script>
+  {{> javascripts }}
+  <script>
+    // Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		Flowtime.parallaxInPx(true);
+    Flowtime.start();
+  </script>
+</html>

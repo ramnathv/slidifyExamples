@@ -1,0 +1,9 @@
+<div id="{{slide.id}}" class="step {{slide.class}}" 
+  data-x="{{slide.x}}" data-y="{{slide.y}}" {{#slide.z}}data-z="{{.}}"{{/slide.z}} 
+   {{#slide.rot}} data-rotate="{{.}}" {{/slide.rot}}
+   {{#slide.rotx}}data-rotate-x="{{.}}"{{/slide.rotx}} 
+   {{#slide.roty}}data-rotate-y="{{.}}"{{/slide.roty}} 
+   {{#slide.scale}} data-scale="{{.}}"{{/slide.scale}}>
+ {{{ slide.header }}}
+ {{{ slide.content }}}
+</div>

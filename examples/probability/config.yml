@@ -1,0 +1,6 @@
+widgets: [mathjax, bootstrap, quiz, opencpu, popcornjs]
+url: {lib: ../../libraries, assets: assets}
+mode: selfcontained
+hitheme: solarized_light
+biglogo: slidify_biglogo.png
+logo: slidify_logo.png

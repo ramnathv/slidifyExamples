@@ -1,0 +1,37 @@
+---
+layout: slide
+---
+
+<div class='row-fluid'>
+ <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm{{slide.sno}}">
+<div class='span4'>
+  {{{ slide.content }}}
+  {{# slide.task }}
+  <div class='build'>
+    <div class='alert alert-info'>
+      {{{ slide.task.html }}}
+    </div>
+  </div>
+   {{/ slide.task }}
+</div>
+<div class='span8'>
+    <div id='aceeditor{{slide.sno}}'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary knitBtn" id="knitBtn{{slide.sno}}">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a class="btn btn-disabled knitTest" id="knitTest{{slide.sno}}">
+        <i class="icon-check"></i> Check
+      </a>
+      <a id="clear{{slide.sno}}" class='btn btn-danger knitClear'>
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' title="{{slide.hint.html}}">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+    <br/>
+  <div id="knitResult{{slide.sno}}" class='wordwrap'></div>
+</div>
+</form>
+</div>

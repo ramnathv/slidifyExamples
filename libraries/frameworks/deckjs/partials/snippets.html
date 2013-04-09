@@ -1,0 +1,45 @@
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+<span class="deck-status-current"></span>
+  /
+<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{page.url.framework}}/jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Add Slide Class to Build Elements -->
+<script type='text/javascript'>
+$('ol.build li').addClass('slide')
+$('ul.build li').addClass('slide')
+</script>
+
+<!-- Deck Core and extensions -->
+<script src="{{page.url.framework}}/core/deck.core.js"></script>
+{{# page.deckjs.extensions }}
+<script src="{{page.url.framework}}/extensions/{{.}}/deck.{{.}}.js"></script>
+{{/ page.deckjs.extensions }}
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>

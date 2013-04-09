@@ -1,0 +1,22 @@
+---
+layout: slide
+---
+
+<div class='row-fluid'>
+<div class='span4'>
+  <form class='well'>
+    {{{ slide.content }}}
+    <textarea id="code{{slide.sno}}" rows="3" cols="80"></textarea>
+    <div>
+      <button id="run{{slide.sno}}" type="button" class="btn btn-primary action-button">
+        <i class="icon-play icon-white"></i> Run
+      </button>
+    </div>
+    <br/>
+  </form>
+</div>
+<div class='span8'>
+  <div id="result{{slide.sno}}" class="shiny-html-output"></div>
+</div>
+</div>
+

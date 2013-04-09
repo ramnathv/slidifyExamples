@@ -1,0 +1,18 @@
+.ace_editor { 
+  height: 150px;
+  position: relative;
+  border-top: 40px;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  border-bottom-right-radius: 0px;
+  margin-top: 10px;
+}
+
+/* Source: http://snipplr.com/view/10979/css-cross-browser-word-wrap */
+div.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}

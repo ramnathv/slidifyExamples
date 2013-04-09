@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<head>
+  <title>Flowtime</title>
+  <link rel="stylesheet" href="../../libraries/frameworks/flowtime/assets/css/reset.css">
+  <link rel="stylesheet" href="../../libraries/frameworks/flowtime/css/flowtime.css">
+  <link rel="stylesheet" href="../../libraries/frameworks/flowtime/css/themes/default.css">
+  <link rel="stylesheet" href="../../libraries/frameworks/flowtime/assets/css/prism.css">
+  <link rel="stylesheet" href="../../libraries/highlighters/highlight.js/css/tomorrow.css">  
+</head>
+<body>
+  <div class="flowtime">
+    <div class="ft-section " data-id="section-1">
+<div class="ft-page " data-title="">
+  <h2>Slide 1</h2>
+
+<p>These are some contents</p>
+
+<pre><code class="r">require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+		
+</div>
+</div>
+<div class="ft-section " data-id="section-2">
+<div class="ft-page " data-title="">
+  <h2>Slide 2</h2>
+
+<p>Another slide</p>
+		
+</div>
+  <div class="ft-page " data-title="Slide 2A">
+		<h2>Slide 2A</h2>
+
+<p>Nested contents</p>
+		
+	</div>
+  <div class="ft-page " data-title="Slide 2B">
+		<h2>Slide 2B</h2>
+
+<p>Nested contents</p>
+		
+	</div>
+</div>
+  </div>
+</body>
+  <script src="../../libraries/frameworks/flowtime/js/brav1toolbox.js"></script>
+  <script src="../../libraries/frameworks/flowtime/js/flowtime.js"></script>
+	<script src="../../libraries/frameworks/flowtime/assets/js/prism.js"></script>
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="../../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+    <script>
+    // Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		Flowtime.parallaxInPx(true);
+    Flowtime.start();
+  </script>
+</html>

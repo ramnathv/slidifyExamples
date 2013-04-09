@@ -1,0 +1,5 @@
+---
+layout: slide
+---
+
+<%= slide$names[1] %>

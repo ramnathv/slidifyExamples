@@ -1,0 +1,21 @@
+---
+layout: slide
+---
+
+<ul class="nav nav-tabs">
+{{# slide.blocks }}
+  <li><a href="#{{ id }}" data-toggle="tab">{{ title }}</a></li>
+{{/ slide.blocks }}
+</ul>
+
+<div class="tab-content">
+{{# slide.blocks }}
+  <div class="tab-pane" id="{{ id }}">
+    {{{ content }}}
+  </div>
+{{/ slide.blocks }}
+</div>
+
+<style>
+ul.nav li:before {content: ""}
+</style>

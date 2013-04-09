@@ -1,0 +1,5 @@
+bootstrap:
+  css: css/bootstrap.min.css
+  js: [js/bootstrap.min.js, "http://js/bootbox.min.js"]
+  jshead : js/bootstrap.js
+

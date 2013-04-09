@@ -1,0 +1,41 @@
+.draggable {
+  position: relative;
+  left: 646px;
+  top: -391px;
+  width: 250px;
+}
+
+/*
+.draggable p{
+ font-family: 'Architects Daughter'
+ line-height: 1em;
+ font-color: whitesmoke;
+}
+*/
+
+#draggable1 {
+  left: 625px;
+  top: -486px;
+}
+#draggable2 {
+ left: 616px;
+ top: -487px;
+}
+#draggable3 {
+  left: 152px;
+  top: -898px;
+}
+
+#draggable4 {
+ left: 455px;
+ top: -633px;
+}
+
+/* Modify the Color of the Box */
+#draggable4 p {
+  border: 5px solid darkslategray;
+}
+
+#draggable4 p:before{
+  border-color: darkslategray transparent;
+}

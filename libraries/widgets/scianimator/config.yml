@@ -1,0 +1,3 @@
+scianimator:
+  jshead: js/jquery.scianimator.pack.js
+  css: [css/scianimator.css, css/scianimator.light.css]

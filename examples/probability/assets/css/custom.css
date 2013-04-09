@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Source+Code+Pro:500|Open+Sans|Oswald);
+
+div.modal-body pre{
+  left: -45px;
+}
+
+.pagination {
+  position: absolute;
+  bottom: -5px;
+  left:110px;
+}
+
+.pagination ul li:before {
+  content: "";
+}
+
+body {
+  font-family: "Open Sans";
+  color: #444;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5em;
+}
+/* Place Video on Top Right */
+/* FIXME: Move CSS to css/popcorn.css */
+section.video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+
+/* Smaller code fonts in modal popup */
+.modal pre code {
+  font-size: 16px;
+}
+
+img.center {
+  display: block;
+  margin: auto auto;
+}
+
+body {
+  background-color: #000;
+}
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+slide.segue h2{
+ font-family: "Open Sans Condensed";
+ font-weight: 700;
+}
+slide:not(.segue)  h2{
+ font-family: "Open Sans Condensed";
+ font-weight: 700;
+ color: darkslategray;
+}
+article p {
+  font-family: "Open Sans"
+}
+
+code {
+  font-size: 100%;
+  font-family: "Source Code Pro", monospace;
+  color: darkred;
+}
+pre code {
+  font-weight: 500;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#glimmer iframe {
+  width: 100%;
+}
+
+.title-slide {
+  background-color: #CBE7A5; /* #EDE0CF; ; #CA9F9D*/
+  /* background-image:url(http://goo.gl/EpXln); */
+}
+
+.title-slide hgroup > h1{
+ font-family: 'Oswald', 'Helvetica', sanserif; 
+}
+
+.title-slide hgroup > h1, 
+.title-slide hgroup > h2 {
+  color: #535E43 ;  /* ; #EF5150*/
+}
+

@@ -1,0 +1,13 @@
+---
+layout: slide
+---
+
+{{{ slide.content }}}
+
+{{# slide.blocks }}
+<div id='{{id}}' class="draggable ui-widget-content build">
+  <div class='triangle-border {{class}}'>
+    {{{ html }}}
+  </div>
+</div>
+{{/ slide.blocks }}

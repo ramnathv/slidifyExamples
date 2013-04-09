@@ -1,0 +1,41 @@
+---
+layout: slide
+---
+
+<div class='row-fluid'>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm{{slide.sno}}">
+  {{{ slide.content }}}
+    <textarea name="knitCode{{slide.sno}}" class='knitCode'></textarea>
+    <div id='aceeditor{{slide.sno}}'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary" id="knitBtn{{slide.sno}}">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a id="clear{{slide.sno}}" class='btn btn-danger' href="#">
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' href='#' title="{{slide.hint.html}}">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+  </form>
+</div>
+<div class='span6'>
+  <div id="knitResult{{slide.sno}}" class='wordwrap'></div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+runCode({{slide.sno}})
+var aceeditor{{slide.sno}} = newAceEditor("aceeditor{{slide.sno}}", 'knitCode{{slide.sno}}');
+$("#clear{{slide.sno}}").click(function(e){
+  e.preventDefault();
+  $("#knitResult{{slide.sno}}").html("");
+}); 
+});
+</script>
+
+
+
+        

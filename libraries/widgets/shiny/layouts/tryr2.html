@@ -1,0 +1,17 @@
+---
+layout: slide
+---
+
+{{{ slide.content }}}
+<form>
+  <textarea id="code{{slide.sno}}" rows="3" class="field span9"></textarea>
+    <div>
+      <button id="run{{slide.sno}}" type="button" class="btn btn-primary action-button">
+        <i class="icon-play icon-white"></i> Run
+      </button>
+    </div>
+  <br/>
+</form>
+
+<div id="result{{slide.sno}}" class="shiny-html-output"></div>
+

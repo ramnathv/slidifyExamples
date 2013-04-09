@@ -1,0 +1,25 @@
+<title>{{ page.title }}</title>
+<meta name="description" content="{{{ page.title }}}">
+<meta name="author" content="{{{ page.author }}}">
+<meta name="generator" content="slidify" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=1024, user-scalable=no">
+
+<!-- Required stylesheet -->
+<link rel="stylesheet" href="{{page.url.framework}}/core/deck.core.css">
+{{# page.deckjs.extensions }}
+<link rel="stylesheet" href="{{page.url.framework}}/extensions/{{.}}/deck.{{.}}.css">
+{{/ page.deckjs.extensions }}
+
+<!-- Style theme. More available in /themes/style/  -->
+<link rel="stylesheet" href="{{page.url.framework}}/themes/style/{{page.deckjs.theme}}.css">
+
+<!-- Transition theme. More available in /themes/transition/  -->
+<link rel="stylesheet" href="{{page.url.framework}}/themes/transition/{{page.deckjs.transition}}.css">
+<script src="{{page.url.framework}}/modernizr.custom.js"></script>
+
+<!-- LOAD STYLE SHEETS -->
+<link rel="stylesheet" href="{{page.url.highlighter}}/css/{{page.hitheme}}.css">
+
+

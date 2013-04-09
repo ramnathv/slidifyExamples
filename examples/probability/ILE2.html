@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Integrated Learning Environment</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Integrated Learning Environment">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="../../libraries/highlighters/highlight.js/css/default.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel="stylesheet" href = "../../libraries/widgets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href = "../../libraries/widgets/quiz/css/demo.css">
+<link rel="stylesheet" href = "../../libraries/widgets/opencpu/css/opencpu.css">
+<link rel="stylesheet" href = "assets/css/custom.css">
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script> 
+  <script data-main="../../libraries/frameworks/io2012/js/slides" 
+    src="../../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='400px' src="assets/img/slidify_biglogo.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/slidify_logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Integrated Learning Environment</h1>
+    <h2>Using Slidify</h2>
+    <p>Ramnath Vaidyanathan<br/>Assistant Professor, McGill</p>
+  </hgroup>
+  <article></article>  
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Learning Environments</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Slides</li>
+<li>Screencasts</li>
+<li>Slidecasts</li>
+<li>Integrated</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Slides</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+ <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm0">
+<div class='span4'>
+  <div><textarea class='knitCode'>
+# install ggplot2 if you have not done it already
+# install.packages('ggplot2')
+library(ggplot2)
+qplot(wt, mpg, data = mtcars)
+
+</textarea></div>
+
+</div>
+<div class='span8'>
+    <div id='aceeditor0'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary knitBtn" id="knitBtn0">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a class="btn btn-disabled knitTest" id="knitTest0">
+        <i class="icon-check"></i> Check
+      </a>
+      <a id="clear0" class='btn btn-danger knitClear'>
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' title="">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+    <br/>
+  <div id="knitResult0" class='wordwrap'></div>
+</div>
+</form>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p>The first environment we will consider is the ubiqutous slide deck, without which no class, online or offline is considered complete. Slide decks serve dual roles, first as a synchronous teaching aid in class that helps anchor a lecture, and second as an asynchronous record of what was taught, allowing students to revisit the contents later. </p>
+
+<p>Here is how an introductory slide on a <code>ggplot2</code> tutorial might look like. It shows the user how to install ggplot2 and construct a simple scatterplot, along with the output produced.  </p>
+
+<p>Now, this would work great in a classroom environment with an instructor lecturing along. However as a standalone, it falls short. This concern can be partly alleviated by adding more prose to the slide itself or sharing the extra material as speaker notes. However, it is still not efficient.</p>
+
+<p>A second issue with this approach is that to follow along, a student would need to copy the code from the slide, paste it into their code editor, run the code to see the results and then return back to the slide deck. I believe a lot of back and forth between slides and a code editor is highly distracting to the learning process. </p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="fill" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Screencasts</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe width="960" height="720" 
+  src="http://www.youtube.com/embed/TagaAeIHKks" frameborder="0" allowfullscreen>
+</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p>The second environment we will look at is the use of screencasts, which have become increasingly popular</p>
+
+<p>A screencast allows an instructor to record a full demo of the lesson, thereby providing students with a more personalized learning experience. However, a serious shortcoming with screencasts is that students cannot click through links or copy-paste code from the video. So they must be supplemented with slides or a file containing all the code.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Slidecasts</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><iframe src="http://www.slideshare.net/slideshow/embed_code/316043" width="800" height="560" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"></div></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p>The next environment we will review is audio/video synced with slides. In fact, if you have not realized it already, this presentation so far has been an audio synced slideshow. If you are not convinced, try copying some text from the screen.</p>
+
+<p>Audio/Video synced slideshows are a great step forward towards the ideal learning environment. They combine the advantages of slides and screecasts. Several popular services like <a href="http://www.slideshare.com">Slideshare</a> already allow users to create synced presentations.</p>
+
+<p>So what is the problem. Well, these presentations are still static. What if you want to embed interactive content that a student can explore?</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="segue dark nobackground" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Integrated Learning Environment</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p>Now, I will get into what an integrated learning environment can provide.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Execute Code</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm1">
+  <p>Let us start by creating a simple scatterplot. We use the <code>qplot</code> (quick plot) function and pass it the x and y variables along with the data.</p>
+
+<div><textarea class='knitCode'>
+require(ggplot2)
+qplot(x = wt, y = mpg, data = mtcars)
+
+## your turn
+
+
+</textarea></div>
+
+    <div id='aceeditor1'></div>
+     <div class='opencpu btn-toolbar pull-left'>
+      <div class="btn-group">
+      <a class="btn knitBtn btn-small" id="knitBtn1" data-title='Run Code'>
+        <i class="icon-play"></i> 
+      </a>
+      <a class="btn knitTest btn-small" id="knitTest1" data-title='Test Code'>
+        <i class="icon-check"></i>
+      </a>
+      <a id="clear1" class='btn btn-small knitClear' data-title='Clear Output'>
+        <i class="icon-remove"></i>
+      </a>
+      <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;p&gt;This is a hint&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;qplot(wt, mpg, data = mtcars)
+&lt;/code&gt;&lt;/pre&gt;
+">
+        <i class="icon-bookmark"></i>
+      </a>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <div class='build'>
+      <div class='alert alert-info'>
+        <p>Modify the code to create a scatterplot of <code>disp</code> vs <code>hp</code>.</p>
+
+      </div>
+    </div>
+  </form>
+</div>
+<div class='span6'>
+  <div id="knitResult1" class='wordwrap'></div>
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="quiz" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Answer Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-single well new">
+  <p>Consider the assignment <code>x &lt;- c(&#39;alpha&#39;, TRUE, 1)</code>. What would be the <code>class</code> of <code>x</code>?</p>
+
+<ol>
+<li><em>character</em></li>
+<li>numeric</li>
+<li>logical</li>
+<li>mixed</li>
+</ol>
+
+  
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  <div class="quiz-hint">
+    <p>A vector is a collection of items of the same type!</p>
+
+  </div>
+  <div class="quiz-explanation">
+    <p>A vector is a collection of items of the same type. Since, <code>x</code> consists of items of different types, R does what is called <em>type coercion</em> and converts everything to a character.</p>
+
+  </div>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Stemplots</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">x &lt;- rnorm(100)
+stem(x)
+  The decimal point is at the |
+
+  -2 | 7511
+  -1 | 97666443322111100
+  -0 | 99988877776666555554444444332221110
+   0 | 011111122223344446677888
+   1 | 00001111234444567
+   2 | 16
+   3 | 2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p><div style="background:#fff; padding:3px">
+  <iframe style="border:1px solid gray; height:500px; width:500px"
+    src="http://piratepad.net/yourpadname?fullScreen=1">
+  </iframe>
+<div></p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Percentile</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The nth percentile of an observation variable is the value that cuts off the first n percent of the data values when it is sorted in ascending order.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Find the 32nd, 57th and 98th percentiles of the eruption durations in the data set <code>faithful</code>.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>We use the <code>quantile</code> function to compute the percentiles of eruptions with the desired percentage ratios.</p>
+
+<pre><code class="r">&gt; quantile(faithful$eruptions, c(0.32, 0.57, 0.98))
+  32%   57%   98% 
+2.395 4.133 4.933 
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:lightblue;">
+  <hgroup>
+    <h2>Exercise</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm2">
+  <p>Find the 17th, 43rd, 67th and 85th percentiles of the eruption waiting periods in faithful.</p>
+
+<div><textarea class='knitCode'></textarea></div>
+
+    <div id='aceeditor2'></div>
+     <div class='opencpu btn-toolbar pull-left'>
+      <div class="btn-group">
+      <a class="btn knitBtn btn-small" id="knitBtn2" data-title='Run Code'>
+        <i class="icon-play"></i> 
+      </a>
+      <a class="btn knitTest btn-small" id="knitTest2" data-title='Test Code'>
+        <i class="icon-check"></i>
+      </a>
+      <a id="clear2" class='btn btn-small knitClear' data-title='Clear Output'>
+        <i class="icon-remove"></i>
+      </a>
+      <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;quantile(faithful$waiting, c(0.17, 0.43, 0.67, 0.85))
+17% 43% 67% 85% 
+ 54  73  80  84 
+&lt;/code&gt;&lt;/pre&gt;
+">
+        <i class="icon-bookmark"></i>
+      </a>
+      </div>
+    </div>
+    <br/>
+    <br/>
+  </form>
+</div>
+<div class='span6'>
+  <div id="knitResult2" class='wordwrap'></div>
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Interquartile Range</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The interquartile range of an observation variable is the difference of its upper and lower quartiles. It is a measure of how far apart the middle portion of data spreads in value.</p>
+
+<p><img src="http://sph.bu.edu/otlt/MPH-Modules/BS/BS704_SummarizingData/Interquartile-Even.png" alt="IQR"></p>
+
+<div class='source'>
+Source: <a href=http://sph.bu.edu/otlt/MPH-Modules/BS/BS704_SummarizingData/BS704_SummarizingData7.html>Boston University</a>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Interquartile Range</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We can use the <code>IQR</code> function to compute the interquartile range of a variable <code>x</code>.</p>
+
+<pre><code class="r">&gt; x &lt;- c(62, 63, 64, 70, 72, 76, 77, 81, 81)
+&gt; IQR(x)
+[1] 13
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:lightgreen;">
+  <hgroup>
+    <h2>Exercise</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm3">
+  <p>Find the interquartile range of eruption waiting periods in faithful.</p>
+
+<div><textarea class='knitCode'></textarea></div>
+
+    <div id='aceeditor3'></div>
+     <div class='opencpu btn-toolbar pull-left'>
+      <div class="btn-group">
+      <a class="btn knitBtn btn-small" id="knitBtn3" data-title='Run Code'>
+        <i class="icon-play"></i> 
+      </a>
+      <a class="btn knitTest btn-small" id="knitTest3" data-title='Test Code'>
+        <i class="icon-check"></i>
+      </a>
+      <a id="clear3" class='btn btn-small knitClear' data-title='Clear Output'>
+        <i class="icon-remove"></i>
+      </a>
+      <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;h2&gt;Solution&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;IQR(faithful$waiting)
+[1] 24
+&lt;/code&gt;&lt;/pre&gt;
+">
+        <i class="icon-bookmark"></i>
+      </a>
+      </div>
+    </div>
+    <br/>
+    <br/>
+  </form>
+</div>
+<div class='span6'>
+  <div id="knitResult3" class='wordwrap'></div>
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Histogram</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A <code>histogram</code> consists of vertical bars that graphically shows the frequency distribution of a quantitative variable. The area of each bar is equal to the frequency of items found in each class. You can draw a histogram using the <code>histogram</code> function in the <code>lattice</code> package.</p>
+
+<pre><code class="r">require(lattice)
+histogram(~ mpg, data = mtcars)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-8.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" class="center" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Histograms</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm4">
+  <p>The <code>histogram</code> function accepts two other arguments <code>breaks</code> and <code>color</code> which allow you to customize the graph. Experiment with the two arguments.</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+require(lattice)
+# fill the color of your choice
+mycolor =         
+histogram(~ mpg, data = mtcars, color = mycolor)
+
+</textarea></div>
+
+    <div id='aceeditor4'></div>
+     <div class='opencpu btn-toolbar pull-left'>
+      <div class="btn-group">
+      <a class="btn knitBtn btn-small" id="knitBtn4" data-title='Run Code'>
+        <i class="icon-play"></i> 
+      </a>
+      <a class="btn knitTest btn-small" id="knitTest4" data-title='Test Code'>
+        <i class="icon-check"></i>
+      </a>
+      <a id="clear4" class='btn btn-small knitClear' data-title='Clear Output'>
+        <i class="icon-remove"></i>
+      </a>
+      <a class='hint btn  btn-small' data-title="Get Hint" data-hint="">
+        <i class="icon-bookmark"></i>
+      </a>
+      </div>
+    </div>
+    <br/>
+    <br/>
+  </form>
+</div>
+<div class='span6'>
+  <div id="knitResult4" class='wordwrap'></div>
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16">
+<hgroup>
+  <h2>Boxplot</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="http://web.pdx.edu/%7Estipakb/download/PA551/boxplot_files/boxplot5.jpg" alt="boxplot"></p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Boxplot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>It is easy to draw a boxplot in R using the <code>bwplot</code> function in the <code>lattice</code> package. Let us draw a boxplot of the variable <code>mpg</code> in the data set <code>mtcars</code>.</p>
+
+<pre><code class="r">bwplot(~ mpg, data = mtcars)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-10.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" class=center /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm5">
+  <p>Construct a boxplot of <code>wt</code> from the dataset <code>mtcars</code>. What can you conclude about the distribution of weights based on the plot?</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+## enter your code
+require(lattice)
+
+</textarea></div>
+
+    <div id='aceeditor5'></div>
+     <div class='opencpu btn-toolbar pull-left'>
+      <div class="btn-group">
+      <a class="btn knitBtn btn-small" id="knitBtn5" data-title='Run Code'>
+        <i class="icon-play"></i> 
+      </a>
+      <a class="btn knitTest btn-small" id="knitTest5" data-title='Test Code'>
+        <i class="icon-check"></i>
+      </a>
+      <a id="clear5" class='btn btn-small knitClear' data-title='Clear Output'>
+        <i class="icon-remove"></i>
+      </a>
+      <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;p&gt;The reason my plots were prettier, is because I used another R package &lt;code&gt;latticeExtra&lt;/code&gt; that allows customizing plots to appear like those in the economist. If you want your plots to appear like mine, add the following lines to your R code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;# load latticeExtra 
+require(latticeExtra)
+# set theme and options according to the Economist
+trellis.par.set(theme = theEconomist.theme(
+  with.bg = TRUE, box = &amp;#39;transparent&amp;#39;)
+)
+lattice.options(theEconomist.opts())
+&lt;/code&gt;&lt;/pre&gt;
+">
+        <i class="icon-bookmark"></i>
+      </a>
+      </div>
+    </div>
+    <br/>
+    <br/>
+  </form>
+</div>
+<div class='span6'>
+  <div id="knitResult5" class='wordwrap'></div>
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Draggable</h2>
+  </hgroup>
+  <article data-timings="">
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+<p><link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" /></p>
+
+<style>
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+#draggable {
+position: relative;
+left: 158px;
+top: 55px;
+}
+</style>
+
+<script>
+  $(function() {
+    $("#draggable").draggable()
+  .click(function() {
+    $(this).draggable({ disabled: false });
+}).dblclick(function() {
+    $(this).draggable({ disabled: true });
+});
+  });
+</script>
+
+<div id="draggable" class="ui-widget-content">
+  <p contenteditable="true">Drag me around</p>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="genmult" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <style>
+#genmult {
+  font-size: 3em;
+  color: "darkbrown";
+}
+</style>
+
+<h2>General Multiplication Rule</h2>
+
+<p>The multiplication rule for the joint probability of two events \(A\) and \(B\) can be generalized for the case where they are NOT independent.</p>
+
+<div class='vcenter'>
+$$P(A \cap B) = P(A) \times P(B \mid A) $$
+</div>
+
+<div class='alert alert-error'><p>
+Note that the formula replaces the probability of event $B$, $P(B)$ with the conditional probability of $B$, given that $A$ has already occured, i.e. $P(B \mid A)$.
+</p></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script src='../../libraries/widgets/bootstrap/js/bootstrap.min.js'></script>
+<script src="../../libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script>  
+$(function (){ 
+  $("#example").popover(); 
+  $("[rel='tooltip']").tooltip(); 
+});  
+</script>  
+<script src='../../libraries/widgets/quiz/js/jquery.quiz.js'></script>
+<script src='../../libraries/widgets/quiz/js/mustache.min.js'></script>
+<script src='../../libraries/widgets/quiz/js/quiz-app.js'></script>
+
+<script type='text/javascript' src='../../libraries/widgets/ace/js/ace.js'></script>
+<script type='text/javascript' src='../../libraries/widgets/opencpu/js/opencpu.js'></script>
+
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="../../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+</html>

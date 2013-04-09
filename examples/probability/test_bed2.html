@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Bed</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Test Bed">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="../../libraries/highlighters/highlight.js/css/solarized_dark.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel="stylesheet" href = "../../libraries/widgets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href = "../../libraries/widgets/quiz/css/demo.css">
+<link rel="stylesheet" href = "../../libraries/widgets/opencpu/css/opencpu.css">
+<link rel="stylesheet" href = "assets/css/callouts.css">
+<link rel="stylesheet" href = "assets/css/custom.css">
+<link rel="stylesheet" href = "assets/css/draggable.css">
+<link rel="stylesheet" href = "assets/css/tabrow.css">
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script> 
+  <script data-main="../../libraries/frameworks/io2012/js/slides" 
+    src="../../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='400px' src="assets/img/slidify_biglogo.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/slidify_logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Test Bed</h1>
+    <h2>Features</h2>
+    <p>Ramnath Vaidyanathan<br/>Assistant Professor, McGill</p>
+  </hgroup>
+    <a href="https://github.com/ramnathv/slidio/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="segue nobackground dark" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Test Bed</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Question 1</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p>A normally distributed population has a mean of \(\mu = 100\) and a standard deviation of \(\sigma = 20\). Suppose we select a sample of size 4.</p>
+
+<ol>
+<li>What is the mean of the sampling distribution?</li>
+<li>What is the standard error of the sampling distribution?</li>
+<li>What is the probability that our selected sample has a mean greater than 110?</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <ol>
+<li><span class="answer">100</span></li>
+<li><span class="answer">10</span></li>
+<li>The sampling distribution of the sample mean, for samples of size 4 will be normal with mean 100 and standard deviation \(\frac{20}{\sqrt{4}}\). Hence, the probability of selecting a sample with mean greater than 110 is given by
+\[
+\begin{aligned}
+P(X > 110) & = P\left(Z > \frac{110 - 100}{\sqrt{4}}\right) \\
+         & = P\left(Z > 1\right) 
+\end{aligned}
+\] 
+Either using the standard normal table, or by using the 68-95-99.7 rule, we can compute this probability to be <span class="answer">0.1587</span></li>
+</ol>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Correlation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <p><img src=http://www.clipular.com/c?2852143=J0T6IdNSBQiwafHVE_6_lMuJ_ME></p>
+
+  </div>
+  <div class='span6'>
+    <div class="quiz quiz-single well new">
+      <p>Suppose the average number of Karma points per post is 13.8 and the standard deviation is 4.8. What proportion of students would have more than 20 points per post?</p>
+
+<ol>
+<li><em>0.0982</em></li>
+<li>0.9018</li>
+<li>0.0491</li>
+<li>0.1965</li>
+</ol>
+
+      <button class="quiz-submit btn btn-primary">Submit</button>
+      <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+      <button class="quiz-show-answer btn btn-success">Show Answer</button>
+      <button class="quiz-clear btn btn-danger">Clear</button>
+      
+      <div class="quiz-explanation">
+  
+</div>
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Correlation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <p><img src=http://www.clipular.com/c?2852143=J0T6IdNSBQiwafHVE_6_lMuJ_ME></p>
+
+  </div>
+  <div class='span6'>
+    <div class="quiz quiz-single well new">
+      <p>Suppose the average number of Karma points per post is 13.8 and the standard deviation is 4.8. What proportion of students would have more than between 10 and 16 points per post?</p>
+
+<ol>
+<li><em>0.0982</em></li>
+<li>0.9018</li>
+<li>0.0491</li>
+<li>0.1965</li>
+</ol>
+
+      <button class="quiz-submit btn btn-primary">Submit</button>
+      <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+      <button class="quiz-show-answer btn btn-success">Show Answer</button>
+      <button class="quiz-clear btn btn-danger">Clear</button>
+      
+      <div class="quiz-explanation">
+  
+</div>
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Quartiles of Normal Distribution</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p>The median of any normal distribution equals its mean. </p>
+
+<ol>
+<li>What is the area under the standard normal curve to the left of the first quartile?</li>
+<li>Use the value found in (1) to determine the first quartile for a standard normal distribution?</li>
+<li></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  </div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="inline" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Q3</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well inline">
+  <p>If the life of wild pheasants follows a normal distribution with a mean of 9 months and a variance of 9, what percent of the population will be less than 11 months of age?</p>
+
+<ol>
+<li>34.13<br></li>
+<li><em>74.86</em></li>
+<li>84.13<br></li>
+<li>62.93</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <p>We are looking for the area to the left of x = 11</p>
+
+<p><img src="assets/fig/unnamed-chunk-5.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" class=center /></p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Question 4</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>The distribution of lifetimes for a certain type of light bulb is normally distributed with a mean of 1000 hours and a standard deviation of 100 hours.  Find the 33rd percentile of
+the distribution of lifetimes.</p>
+
+<ol>
+<li>560</li>
+<li>330</li>
+<li>1044</li>
+<li>1440</li>
+<li><em>none of these</em></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <p>We are interested in finding the 33rd percentile. Computing the z-score corresponding to p = 0.33, we get z = -0.4399. We can find the required percentile by &quot;unstandardizing&quot; the z-score . Hence, we get x = 1000 + 100 * -0.4399, which gives us x = 956.0087.</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Question 5</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <p><img class='vcenter' src='http://www.comscoredatamine.com/wp-content/uploads/2012/02/facebookgrowthregions_dec11.png'></p>
+
+  </div>
+  <div class='span6'>
+    <div class="quiz quiz-single well new">
+      <p>Are the heights of each bar a relative frequency?</p>
+
+<ol>
+<li>Yes</li>
+<li>No</li>
+</ol>
+
+      <button class="quiz-submit btn btn-primary">Submit</button>
+      <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+      <button class="quiz-show-answer btn btn-success">Show Answer</button>
+      <button class="quiz-clear btn btn-danger">Clear</button>
+      
+      <div class="quiz-hint">
+  <ol>
+<li>This is hint 1.</li>
+<li>This is hint 2.</li>
+</ol>
+
+</div>
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="small" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Heights</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text quiz-multitext well">
+  <p>The distribution of heights of a population of adults is approximately normal with mean 66 inches and SD 2.5 inches. [For those of you who are used to the metric system: one foot is 12 inches.]</p>
+
+<ol>
+<li>Approximately what percent of the adults are over 6 feet tall?</li>
+<li>Approximately what percent of the adults have heights that are within 1 inch of the average?</li>
+<li>Approximately what percent of the adults are 70 inches tall, to the nearest inch?</li>
+<li>Approximately what is the 90th percentile of the heights, in inches?</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-explanation">
+  <ol>
+<li><p>The percent of adults over 6 feet tall is given by</p>
+
+<pre><code class="r">pnorm(6, mean = 66/12, sd = 2.5, lower.tail = F)
+</code></pre>
+
+<pre><code>## [1] 0.4207
+</code></pre>
+
+<p>\(\alpha = \beta + \gamma\)</p></li>
+</ol>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Normal Distribution</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<p><img src="assets/fig/unnamed-chunk-9.svg" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" class=center /></p>
+
+
+<div id='draggable1' class="draggable ui-widget-content build">
+  <div class='triangle-border '>
+    <p><strong>Direction</strong>: What is the direction of the relationship?</p>
+
+  </div>
+</div>
+<div id='draggable2' class="draggable ui-widget-content build">
+  <div class='triangle-border top'>
+    <p><strong>Form</strong>: Is the overall relationship a line, a quadratic curve ...?</p>
+
+  </div>
+</div>
+<div id='draggable3' class="draggable ui-widget-content build">
+  <div class='triangle-border '>
+    <p><strong>Strength</strong>: Is there significant variation in values around the best fitting curve?</p>
+
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Guess the Correlation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-10.svg" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" class=center /></p>
+
+<div id='draggable4' class="draggable ui-widget-content build">
+  <p class='triangle-border'>
+  $$r = \sum \frac{z_x \times z_y}{n - 1}$$
+  </p>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Highway Signs</h2>
+  </hgroup>
+  <article data-timings="">
+    <style>
+.table-half {
+  width: 50%;
+  margin: auto auto;
+}
+</style>
+
+<p>A Pennsylvania research firm conducted a study in which 30 drivers (of ages 18 to 82 years old) were sampled, and for each one, the maximum distance (in feet) at which he/she could read a newly designed sign was determined. The goal of this study was to explore the relationship between a driver&#39;s age and the maximum distance at which signs were legible, and then use the study&#39;s findings to improve safety for older drivers. (Reference: Utts and Heckard, Mind on Statistics (2002). Originally source: Data collected by Last Resource, Inc, Bellfonte, PA.)</p>
+
+<!-- html table generated in R 2.15.2 by xtable 1.7-1 package -->
+
+<!-- Tue Mar 26 17:06:34 2013 -->
+
+<TABLE class=table-half>
+<TR> <TH>  </TH> <TH> Age </TH> <TH> Distance </TH>  </TR>
+  <TR> <TD align="right"> 1 </TD> <TD align="right">  18 </TD> <TD align="right"> 510 </TD> </TR>
+  <TR> <TD align="right"> 2 </TD> <TD align="right">  20 </TD> <TD align="right"> 590 </TD> </TR>
+  <TR> <TD align="right"> 3 </TD> <TD align="right">  22 </TD> <TD align="right"> 560 </TD> </TR>
+  <TR> <TD align="right"> 4 </TD> <TD align="right">  23 </TD> <TD align="right"> 510 </TD> </TR>
+  <TR> <TD align="right"> 5 </TD> <TD align="right">  23 </TD> <TD align="right"> 460 </TD> </TR>
+  <TR> <TD align="right"> 6 </TD> <TD align="right">  25 </TD> <TD align="right"> 490 </TD> </TR>
+   </TABLE>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Execute Code</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm13">
+      <p>We can create a scatterplot using the <code>xyplot</code> function in the <code>lattice</code> package. Click the <i icon-run></i> button to run the code.</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+require(lattice)
+xyplot(mpg ~ wt, data = mtcars, pch = 16)
+
+</textarea></div>
+
+<p class='build'>
+From the scatterplot, we observe a strong, negative, linear relationship between the variables.
+</p>
+
+      <div id='aceeditor13'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn13" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest13" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a class='btn btn-small knitClear' id="clear13"  data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult13" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Execute More Code</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <form action="http://public.opencpu.org/R/pub/base/identity/ascii" 
+      method="POST" id="knitForm14">
+      <p>Checking to see if this works for more cells</p>
+
+<p>\(\alpha = \beta + \gamma\)</p>
+
+<div><textarea class='knitCode' style='display:none;'>
+require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+
+</textarea></div>
+
+      <div id='aceeditor14'></div>
+      <div class='opencpu btn-toolbar pull-left'>
+        <div class="btn-group">
+          <a class="btn knitBtn btn-small" id="knitBtn14" data-title='Run Code'>
+            <i class="icon-play"></i> 
+          </a>
+          <a class="btn knitTest btn-small" id="knitTest14" data-title='Test Code'>
+            <i class="icon-check"></i>
+          </a>
+          <a class='btn btn-small knitClear' id="clear14"  data-title='Clear Output'>
+            <i class="icon-remove"></i>
+          </a>
+          <a class='hint btn  btn-small' data-title="Get Hint" data-hint="&lt;p&gt;This is an explanation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;\(\alpha = \beta + \gamma\)&lt;/p&gt;
+">
+            <i class="icon-bookmark"></i>
+          </a>
+        </div><br/><br/>
+      </div>      
+    </form>
+  </div>
+  <div class='span6'>
+    <div id="knitResult14" class='wordwrap'></div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+<script>
+$(function() {
+  $( ".draggable" ).draggable();
+});
+</script>
+
+<script>
+$('.pagination li a').live('click', function(){
+  var i = $(this).data('slide');
+  window.slidedeck.gotoSlide(i+1);
+});
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Test Bed'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Question 1'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Correlation'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Correlation'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Quartiles of Normal Distribution'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Q3'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Question 4'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Question 5'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Heights'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Normal Distribution'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Guess the Correlation'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Highway Signs'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Execute Code'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Execute More Code'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title=''>
+         15
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script src='../../libraries/widgets/bootstrap/js/bootstrap.min.js'></script>
+<script src="../../libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script>  
+$(function (){ 
+  $("#example").popover(); 
+  $("[rel='tooltip']").tooltip(); 
+});  
+</script>  
+<script src='../../libraries/widgets/quiz/js/jquery.quiz.js'></script>
+<script src='../../libraries/widgets/quiz/js/mustache.min.js'></script>
+<script src='../../libraries/widgets/quiz/js/quiz-app.js'></script>
+
+<script type='text/javascript' src='../../libraries/widgets/ace/js/ace.js'></script>
+<script type='text/javascript' src='../../libraries/widgets/opencpu/js/opencpu.js'></script>
+
+<script src="../../libraries/widgets/popcornjs/js/popcorn-complete.min.js"></script>
+<script src="../../libraries/widgets/popcornjs/js/popcorn-custom.js"></script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="../../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+
+<script src='assets/js/app.js'></script 
+</html>

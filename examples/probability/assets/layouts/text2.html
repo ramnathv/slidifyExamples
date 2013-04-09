@@ -1,0 +1,22 @@
+---
+layout: slide
+---
+
+
+<div class="quiz-text well">
+  {{{ slide.content }}}
+  {{# slide.blocks }}
+    {{{ html }}}
+    <input type="text" class="quiz-answerbox" data-answer="{{{ans}}}">
+  {{/ slide.blocks }}
+
+  <br/>
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  <div class="quiz-explanation">
+    {{{ slide.explanation.html }}}
+  </div>
+</div>

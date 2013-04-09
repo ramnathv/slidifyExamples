@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="http://nvd3.org/src/nv.d3.css" rel="stylesheet" type="text/css">
+  <style>
+  body {
+    overflow-y:scroll;
+    width: 960px;
+    margin-left: auto; 
+    margin-right: auto;
+    padding-top: 100px;
+  }
+  #chart {
+    height: 500px;
+    width: 900px;
+  }
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://nvd3.org/lib/d3.v2.js"></script>
+  <script src="http://nvd3.org/nv.d3.js"></script>
+</head>
+<body>
+  <div id='chart'></div>
+</body>
+  <script type='text/javascript'>
+    var params = {"x":"sex","y":"freq","group":"day","geom":"multiBarChart","id":"chart"},
+      data = [{"day":"Fri","sex":"Female","freq":9},{"day":"Fri","sex":"Male","freq":10},{"day":"Sat","sex":"Female","freq":28},{"day":"Sat","sex":"Male","freq":59},{"day":"Sun","sex":"Female","freq":18},{"day":"Sun","sex":"Male","freq":58},{"day":"Thur","sex":"Female","freq":32},{"day":"Thur","sex":"Male","freq":30}];
+      
+    drawChart(params, data)
+    
+  function drawChart(params, data){
+    var x = params.x, 
+      y = params.y, 
+      geom = params.geom, 
+      group = params.group;
+      id = params.id;
+      
+    var data = d3.nest()
+      .key(function(d){ 
+        if (group === undefined){
+         return 'main' 
+        } else {
+          return d[group] }
+       })
+      .entries(data)
+      
+    nv.addGraph(function() {
+      var chart = nv.models[geom]()
+      .x(function(d) { return d[x] })
+      .y(function(d) { return d[y] })
+      .showLegend(!(group === undefined))
+      .width(900)
+      .height(500)
+      
+      // chart.yAxis
+      //  .tickFormat(d3.format('.2f'))
+      
+      // chart.xAxis
+      // .tickFormat(d3.format('.0f'))
+
+      d3.select("#" + id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+      nv.utils.windowResize(chart.update);
+
+      return chart;
+    });
+  };
+  </script>
+</html>

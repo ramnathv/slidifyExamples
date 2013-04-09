@@ -1,0 +1,98 @@
+.tabrow {
+  text-align: center;
+  list-style: none;
+  margin: 100px 0 20px;
+  padding: 0;
+  line-height: 24px;
+  overflow: hidden;
+  font-size: 13px;
+  position: relative;
+}
+.tabrow li {
+  border: 1px solid #e0e0e0;
+  border-left: none;
+  background: #f7f7f7;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: 0 -5px;
+  padding: 3px 20px;
+  cursor: pointer;
+  color: #85b2d4;
+}
+.tabrow li span:before {
+  content: " ";
+  position: absolute;
+  left: -3px;
+  top: 3px;
+  bottom: 2px;
+  width: 10px;
+  transform: rotate(14deg);
+  border-left: 1px solid #e0e0e0;
+  background: #f7f7f7;
+}
+.tabrow li span:after {
+  content: " ";
+  position: absolute;
+  right: -5px;
+  top: 3px;
+  bottom: 2px;
+  width: 10px;
+  transform: rotate(-14deg);
+  border-right: 1px solid #e0e0e0;
+  background: #f7f7f7;
+}
+.tabrow li.selected {
+  background: #FFF;
+  color: #333;
+  z-index: 2;
+  border-bottom-color: #FFF;
+  vertical-align: bottom;
+  padding-top: 7px;
+  font-weight: bold;
+  cursor: default;
+}
+.tabrow:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1;
+}
+.tabrow li:before,
+.tabrow li:after {
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  bottom: -1px;
+  width: 5px;
+  height: 5px;
+  content: " ";
+}
+.tabrow li:before {
+  left: -21px;
+  border-bottom-right-radius: 6px;
+  border-width: 0 1px 1px 0;
+  box-shadow: 10px 0px 0 #f7f7f7;
+  padding-right: 10px;
+}
+.tabrow li:after {
+  right: -23px;
+  border-bottom-left-radius: 6px;
+  border-width: 0 0 1px 1px;
+  box-shadow: -10px 2px 0 #f7f7f7;
+  padding-left: 10px;
+}
+.tabrow li.selected:before {
+  box-shadow: 10px 2px 0 #FFF;
+}
+.tabrow li.selected:after {
+  box-shadow: -10px 2px 0 #ffffff;
+}
+.tabrow li.selected SPAN:before,
+.tabrow li.selected SPAN:after {
+  background: white;
+}

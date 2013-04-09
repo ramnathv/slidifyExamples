@@ -1,0 +1,13 @@
+<script src="{{page.url.widgets}}/popcornjs/js/popcorn-complete.min.js"></script>
+<script src="{{page.url.widgets}}/popcornjs/js/popcorn-custom.js"></script>
+{{# page.popcornjs.player }}
+<script>
+var pop = Popcorn.{{page.popcornjs.player}}(
+  "player",
+  "{{page.popcornjs.video}}"
+);
+pop.on('play', function(){
+  slidedeck.timings[0].time = new Date().getTime();
+});
+</script>
+{{/ page.popcornjs.player }}

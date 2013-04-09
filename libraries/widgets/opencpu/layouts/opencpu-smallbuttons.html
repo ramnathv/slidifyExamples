@@ -1,0 +1,24 @@
+<div id='aceeditor{{slide.num}}'></div>
+<div class='opencpu btn-toolbar pull-left'>
+  <div class="btn-group">
+    <a class="btn knitBtn btn-small" id="knitBtn{{slide.num}}" data-title='Run Code'>
+      <i class="icon-play"></i> 
+    </a>
+    <a class="btn knitTest btn-small" id="knitTest{{slide.num}}" data-title='Test Code'>
+      <i class="icon-check"></i>
+    </a>
+    <a id="clear{{slide.num}}" class='btn btn-small knitClear' data-title='Clear Output'>
+      <i class="icon-remove"></i>
+    </a>
+    <a class='hint btn  btn-small' data-title="Get Hint" data-hint="{{slide.hint.html}}">
+      <i class="icon-bookmark"></i>
+    </a>
+  </div><br/><br/>
+  {{# slide.task }}
+  <div class='build'>
+    <div class='alert alert-info'>
+      {{{ slide.task.html }}}
+    </div>
+  </div>
+  {{/ slide.task }}
+</div>

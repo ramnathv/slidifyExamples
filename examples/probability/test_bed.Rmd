@@ -1,0 +1,366 @@
+---
+title: Test Bed
+subtitle: Features
+author: Ramnath Vaidyanathan
+job: Assistant Professor, McGill 
+license: by-nc-sa
+hitheme: solarized_dark
+github:
+  user: ramnathv
+  repo: slidio
+--- .segue .nobackground .dark
+
+## Test Bed
+
+```{r setup, echo = F, cache = F}
+opts_chunk$set(tidy = FALSE)
+knit_hooks$set(source = function(x, options){
+  if (!is.null(options$knitCode) && (options$knitCode)){
+    paste("<div><textarea class='knitCode' style='display:none;'>", x, 
+      "</textarea></div>", sep = '\n')
+  } else {
+    stringr::str_c("\n\n```", tolower(options$engine), "\n", x, "```\n\n")
+  }
+})
+knit_hooks$set(document = function(x){
+  gsub("```\n*```r*\n*", "", x)
+})
+```
+
+--- &multitext
+
+## Question 1
+
+```{r echo = F}
+mu = 100
+sigma = 20
+n = 4
+x = 110
+z = (x - mu)/(sigma/sqrt(n))
+prob = pnorm(x, mu, sigma/sqrt(n), lower.tail = F)
+```
+
+A normally distributed population has a mean of $\mu = `r mu`$ and a standard deviation of $\sigma = `r sigma`$. Suppose we select a sample of size 4.
+
+1. What is the mean of the sampling distribution?
+2. What is the standard error of the sampling distribution?
+3. What is the probability that our selected sample has a mean greater than `r x`?
+
+*** .explanation
+
+1. <span class="answer">`r mu`</span>
+2. <span class="answer">`r sigma/sqrt(n)`</span>
+3. The sampling distribution of the sample mean, for samples of size 4 will be normal with mean `r mu` and standard deviation $\frac{`r sigma`}{\sqrt{`r n`}}$. Hence, the probability of selecting a sample with mean greater than `r x` is given by
+$$
+\begin{aligned}
+P(X > `r x`) & = P\left(Z > \frac{`r x` - `r mu`}{\sqrt{`r n`}}\right) \\
+             & = P\left(Z > `r z`\right) 
+\end{aligned}
+$$ 
+Either using the standard normal table, or by using the 68-95-99.7 rule, we can compute this probability to be <span class="answer">`r prob`</span>
+
+--- &radio2
+
+## Correlation
+
+```{r echo = F}
+mu = 13.8
+sigma = 4.8
+x = 20
+z = (x - mu)/sigma
+pr = pnorm(z, lower.tail = F)
+```
+
+
+Suppose the average number of Karma points per post is 13.8 and the standard deviation is 4.8. What proportion of students would have more than 20 points per post?
+
+1. _`r pr`_
+2. `r 1 - pr`
+3. `r pr/2`
+4. `r 2*pr`
+
+*** =image
+
+<img src=http://www.clipular.com/c?2852143=J0T6IdNSBQiwafHVE_6_lMuJ_ME>
+
+*** .explanation
+
+
+--- &radio2
+
+## Correlation
+
+```{r echo = F}
+mu = 13.8
+sigma = 4.8
+x = 20
+z = (x - mu)/sigma
+pr = pnorm(z, lower.tail = F)
+```
+
+
+Suppose the average number of Karma points per post is 13.8 and the standard deviation is 4.8. What proportion of students would have more than between 10 and 16 points per post?
+
+1. _`r pr`_
+2. `r 1 - pr`
+3. `r pr/2`
+4. `r 2*pr`
+
+*** =image
+
+<img src=http://www.clipular.com/c?2852143=J0T6IdNSBQiwafHVE_6_lMuJ_ME>
+
+*** .explanation
+
+
+--- &multitext
+
+## Quartiles of Normal Distribution
+
+The median of any normal distribution equals its mean. 
+
+1. What is the area under the standard normal curve to the left of the first quartile?
+2. Use the value found in (1) to determine the first quartile for a standard normal distribution?
+3. 
+
+--- &radio .inline
+
+## Q3
+
+If the life of wild pheasants follows a normal distribution with a mean of 9 months and a variance of 9, what percent of the population will be less than 11 months of age?
+
+```{r echo = F}
+mu = 9
+sigma = 3
+x = 11
+z = (x - mu)/sigma
+perc = pnorm(z, lower.tail = T)*100
+```
+
+
+1. 34.13                 
+2. _74.86_
+3. 84.13             
+4. 62.93
+
+*** .explanation
+
+We are looking for the area to the left of x = 11
+
+```{r echo = F, message = F, fig.height = 5, fig.width = 5, out.extra='class=center'}
+require(openintro)
+normTail(9, 3, L = 11)
+```
+
+--- &radio
+
+## Question 4
+
+The distribution of lifetimes for a certain type of light bulb is normally distributed with a mean of 1000 hours and a standard deviation of 100 hours.  Find the 33rd percentile of
+the distribution of lifetimes.
+
+```{r echo = F}
+mu = 1000
+sigma = 100
+pr = 0.33
+z = qnorm(pr)
+x = mu + z * sigma
+```
+
+
+1. 560
+2. 330
+3. 1044
+4. 1440
+5. _none of these_
+
+*** .explanation
+
+We are interested in finding the 33rd percentile. Computing the z-score corresponding to p = 0.33, we get z = `r z`. We can find the required percentile by "unstandardizing" the z-score . Hence, we get x = `r mu` + `r sigma` * `r z`, which gives us x = `r x`.
+
+--- &radio2
+
+## Question 5
+
+Are the heights of each bar a relative frequency?
+
+1. Yes
+2. No
+
+*** .hint
+
+1. This is hint 1.
+2. This is hint 2.
+
+*** =image
+
+<img class='vcenter' src='http://www.comscoredatamine.com/wp-content/uploads/2012/02/facebookgrowthregions_dec11.png'>
+
+--- &multitext .small
+
+## Heights
+
+The distribution of heights of a population of adults is approximately normal with mean 66 inches and SD 2.5 inches. [For those of you who are used to the metric system: one foot is 12 inches.]
+
+1. Approximately what percent of the adults are over 6 feet tall?
+2. Approximately what percent of the adults have heights that are within 1 inch of the average?
+3. Approximately what percent of the adults are 70 inches tall, to the nearest inch?
+4. Approximately what is the 90th percentile of the heights, in inches?
+
+*** .explanation
+
+1. The percent of adults over 6 feet tall is given by
+   
+    ```{r}
+    pnorm(6, mean = 66/12, sd = 2.5, lower.tail = F)
+    ```
+
+--- &draggable
+
+## Normal Distribution
+
+```{r eval = F, echo = F, out.extra = "class=center", dev = 'svg', fig.width = 8, fig.height = 5}
+require(openintro)
+oldmar = par('mar')
+par(mar = c(3, 3, 1, 1))
+normTail(0, 1, xLab = 'symbol')
+segments(-3:3, 0, -3:3, dnorm(-3:3))
+par(mar = oldmar)
+```
+
+
+```{r echo = F, out.extra = "class=center", dev = 'svg', fig.width = 9, fig.height = 5.5}
+require(ggplot2)
+qplot(total_bill, tip, data = tips) +
+  xlab("Total Bill") + ylab("Tips") +
+  geom_smooth(method = 'lm', se = F)
+```
+
+*** #draggable1
+
+__Direction__: What is the direction of the relationship?
+
+*** #draggable2 .top
+
+__Form__: Is the overall relationship a line, a quadratic curve ...?
+
+
+*** #draggable3
+
+__Strength__: Is there significant variation in values around the best fitting curve?
+
+
+---
+
+## Guess the Correlation
+
+```{r echo = F, out.extra = "class=center", dev = 'svg', fig.width = 9, fig.height = 5.5}
+gen_xyplot <- function(rho){
+  x <- rnorm(100)
+	y <- rnorm(100)
+	a <- rho/(1 - rho^2)
+	z <- a*x + y
+	df <- data.frame(x, y, z, rho)
+}
+
+r <- c(-0.5, 0.1, 0, 0.3, 0.7, -0.99)
+df2 <- ldply(r, gen_xyplot)
+ggplot(df2, aes(x, z)) +
+  geom_point(size = 1) + ylab("") + xlab("") +
+  facet_wrap(~ rho, nrow = 2, scales = 'free') + 
+  theme(axis.text.x = element_blank(), axis.text.y = element_blank(), 
+	strip.text.x = element_text(colour = 'gray80'), axis.ticks = element_blank())
+```
+
+<div id='draggable4' class="draggable ui-widget-content build">
+  <p class='triangle-border'>
+  $$r = \sum \frac{z_x \times z_y}{n - 1}$$
+  </p>
+</div>
+
+---
+
+## Highway Signs
+
+<style>
+.table-half {
+  width: 50%;
+  margin: auto auto;
+}
+</style>
+
+A Pennsylvania research firm conducted a study in which 30 drivers (of ages 18 to 82 years old) were sampled, and for each one, the maximum distance (in feet) at which he/she could read a newly designed sign was determined. The goal of this study was to explore the relationship between a driver's age and the maximum distance at which signs were legible, and then use the study's findings to improve safety for older drivers. (Reference: Utts and Heckard, Mind on Statistics (2002). Originally source: Data collected by Last Resource, Inc, Bellfonte, PA.)
+
+```{r echo = F, results = 'asis', comment = NA}
+require(MindOnStats)
+options(xtable.type = 'html')
+options(xtable.html.table.attributes = 'class=table-half')
+data(SignDist)
+xtable(head(SignDist))
+```
+
+--- &opencpusmall
+
+## Execute Code
+
+```{r echo = F}
+getMooreData <- function(dataset){
+  base_url = '~/Downloads/data'
+  read.delim(file.path(base_url, 'moore', dataset), header = TRUE)
+}
+```
+
+We can create a scatterplot using the `xyplot` function in the `lattice` package. Click the <i icon-run></i> button to run the code.
+
+
+```{r eval = F, knitCode = TRUE}
+require(lattice)
+xyplot(mpg ~ wt, data = mtcars, pch = 16)
+```
+
+<p class='build'>
+From the scatterplot, we observe a strong, negative, linear relationship between the variables.
+</p>
+
+--- &opencpusmall
+
+## Execute More Code
+
+Checking to see if this works for more cells
+
+
+$\alpha = \beta + \gamma$
+
+```{r knitCode = TRUE, eval = F}
+require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+```
+
+*** =hint
+
+This is an explanation
+
+```{r eval = F}
+require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+```
+
+$\alpha = \beta + \gamma$
+
+---
+
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+<script>
+$(function() {
+  $( ".draggable" ).draggable();
+});
+</script>
+
+<script>
+$('.pagination li a').live('click', function(){
+  var i = $(this).data('slide');
+  window.slidedeck.gotoSlide(i+1);
+});
+</script>
+

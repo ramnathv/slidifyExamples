@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Introduction to Probability</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Introduction to Probability">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="../../libraries/highlighters/highlight.js/css/default.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel="stylesheet" href = "../../libraries/widgets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href = "../../libraries/widgets/quiz/css/demo.css">
+<link rel="stylesheet" href = "../../libraries/widgets/opencpu/css/opencpu.css">
+<link rel="stylesheet" href = "assets/css/custom.css">
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script> 
+  <script data-main="../../libraries/frameworks/io2012/js/slides" 
+    src="../../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='400px' src="assets/img/slidify_biglogo.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/slidify_logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Introduction to Probability</h1>
+    <h2>MGCR 271</h2>
+    <p>Ramnath Vaidyanathan<br/>Assistant Professor, McGill</p>
+  </hgroup>
+  <article></article>  
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="segue dark nobackground" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <script src='assets/js/app.js'></script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Slides</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p>The classical environment for teaching has been the ubiqutous slide deck, without which no class, online or offline is considered complete. It serves dual roles, as a synchronoous teaching aid in class that helps anchor a lecture, and as an asynchronous record of what was taught, allowing students to revisit the contents later. </p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Introduction to ggplot2</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># install ggplot2 if you have not already done so
+# install.packages(&#39;ggplot2&#39;)
+require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" class="center" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p>In this tutorial, you will learn the basics of <code>ggplot2</code>, an R package that makes it easy to create stunning statistical graphics. The first step is to install <code>ggplot2</code></p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Data Frames</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We will work with the built-in dataset <code>mtcars</code></p>
+
+<pre><code>               mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+</code></pre>
+
+<p>You can inspect the data set in many ways.</p>
+
+<pre><code class="r">head(mtcars)       # view first six rows
+head(mtcars, 10)   # view first ten rows
+tail(mtcars, 20)   # view last twenty rows
+NROW(mtcars)       # view number of rows 
+NCOL(mtcars)       # view number of columns
+dim(mtcars)        # view rows x columns
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Subsetting Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Very often you might want to work with a smaller subset of the data. R makes it very easy to select subsets by combining conditional operations. The main operations are</p>
+
+<pre><code class="text">== : equal to
+!= : not equal to
+&gt;= : greater or equal to
+&lt;= : lesser or equal to
+&amp;  : and
+|  : or
+</code></pre>
+
+<p>Here are some examples of how to choose specific subsets of the mtcars data set.</p>
+
+<pre><code class="r">subset(mtcars, gear == 4)           # four gears
+subset(mtcars, cyl != 2)            # not 2 cylinders
+subset(mtcars, mpg &gt; 20)            # mpg more than 20
+subset(mtcars, mpg &gt; 20 &amp; wt &lt; 20)  # mpg &gt; 20 AND wt &lt; 20
+subset(mtcars, mpg &gt; 20 | wt &lt; 20)  # mpg &gt; 20 OR wt &lt; 20
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue nobackground" id="slide-6" style="background:lightblue;">
+  <hgroup>
+    <h2><span style='color:#003366;'>Data Structures</span></h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Vector</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <p>A <code>vector</code> is a collection of items (or elements) that are all of the same type (integers, numbers, strings, true/false values). You can create a vector by simply passing a comma separated set of items to the <code>c()</code> function, which concatenates them into a vector.</p>
+
+<pre><code class="r">num_vec  = c(1, 2, 3, 4, 5)      
+char_vec = c(&#39;Ross&#39;, &#39;Chandler&#39;) 
+logi_vec = c(TRUE, FALSE, FALSE) 
+</code></pre>
+
+  <div class='build'>
+  <div class='alert alert-info'>
+    <p>Create a vector consisting of abbreviated weekdays (Mon, Tue etc.) and assign it to the variable <code>weekdays</code></p>
+
+  </div>
+  </div>
+</div>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm2">
+    <textarea name="knitCode2" class='knitCode'></textarea>
+    <div id='aceeditor2'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary" id="knitBtn2">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a id="clear2" class='btn btn-danger' href="#">
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' href='#' title="">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+  </form>
+  <div id="knitResult2" class='wordwrap'></div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+  runCode(2)
+  var aceeditor2 = newAceEditor("aceeditor2", 'knitCode2');
+  $("#clear2").click(function(e){
+    e.preventDefault();
+    $("#knitResult2").html("");
+  })
+});
+</script>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Vector</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <p>A vector has two key properties: <code>length</code> and <code>mode</code>.</p>
+
+<pre><code class="r">&gt; num_vec &lt;- c(1, 2, 3, 4, 5)
+&gt; length(num_vec)
+[1] 5
+&gt; mode(num_vec)
+[1] &quot;numeric&quot;
+</code></pre>
+
+  <div class='build'>
+  <div class='alert alert-info'>
+    <p><strong>Task</strong>: Create a vector <code>x &lt;- c(&#39;alpha&#39;, &#39;beta&#39;, 2)</code>. Can you guess what its mode and length would be? Use the functions learnt above to figure it out for yourself!</p>
+
+  </div>
+  </div>
+</div>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm3">
+    <textarea name="knitCode3" class='knitCode'></textarea>
+    <div id='aceeditor3'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary" id="knitBtn3">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a id="clear3" class='btn btn-danger' href="#">
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' href='#' title="&lt;p&gt;A little surprised that &lt;code&gt;mode(x)&lt;/code&gt; returns &lt;code&gt;character&lt;/code&gt;. Well, recall that a vector by definition consists of elements of the &lt;strong&gt;same type&lt;/strong&gt;. So, R does what is called &lt;strong&gt;type coercion&lt;/strong&gt; and coerces the number 2 to a character string &amp;quot;2&amp;quot;.&lt;/p&gt;
+">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+  </form>
+  <div id="knitResult3" class='wordwrap'></div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+  runCode(3)
+  var aceeditor3 = newAceEditor("aceeditor3", 'knitCode3');
+  $("#clear3").click(function(e){
+    e.preventDefault();
+    $("#knitResult3").html("");
+  })
+});
+</script>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>List</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <p>A <code>list</code>, like a <code>vector</code> is a collection of items. But unlike a <code>vector</code>, the items can be of different types. Here is an example of a list.</p>
+
+<pre><code class="r">&gt; list(c(1, 2, 3), TRUE, &#39;gamma&#39;)
+[[1]]
+[1] 1 2 3
+
+[[2]]
+[1] TRUE
+
+[[3]]
+[1] &quot;gamma&quot;
+</code></pre>
+
+<p>Note that it consists of three items, the first is a vector (of characters), the second is a <code>logical</code> value, while the third is a <code>numeric</code>. </p>
+
+  <div class='build'>
+  <div class='alert alert-info'>
+    <p>Verify for yourself the <code>mode</code> of each item of the list. You will need to assign the list to a variable first.</p>
+
+  </div>
+  </div>
+</div>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm4">
+    <textarea name="knitCode4" class='knitCode'></textarea>
+    <div id='aceeditor4'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary" id="knitBtn4">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a id="clear4" class='btn btn-danger' href="#">
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' href='#' title="">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+  </form>
+  <div id="knitResult4" class='wordwrap'></div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+  runCode(4)
+  var aceeditor4 = newAceEditor("aceeditor4", 'knitCode4');
+  $("#clear4").click(function(e){
+    e.preventDefault();
+    $("#knitResult4").html("");
+  })
+});
+</script>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Exercise 1</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+<div class='span6'>
+  <form action="http://public.opencpu.org/R/pub/base/identity/ascii" method="POST" id="knitForm5">
+  <p>Create a vector representing the radii of three circles with lengths 5, 10, and 20. Use * and the built-in constant <code>pi</code> to compute the areas of the three circles. Then subtract 2.1 from each radius and recompute the areas.</p>
+
+    <textarea name="knitCode5" class='knitCode'></textarea>
+    <div id='aceeditor5'></div>
+    <div class='opencpu'>
+      <a class="btn btn-primary" id="knitBtn5">
+        <i class="icon-play icon-white"></i> Run
+      </a>
+      <a id="clear5" class='btn btn-danger' href="#">
+        <i class="icon-remove icon-white"></i> Clear
+      </a>
+      <a class='hint btn btn-success' href='#' title="&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;myradii  &amp;lt;- c(5, 10, 20)
+pi * myradii^2
+[1]   78.54  314.16 1256.64
+pi * (myradii - 2.1)^2
+[1]   26.42  196.07 1006.60
+&lt;/code&gt;&lt;/pre&gt;
+">
+        <i class="icon-bookmark icon-white"></i> Hint
+      </a>
+    </div>
+  </form>
+</div>
+<div class='span6'>
+  <div id="knitResult5" class='wordwrap'></div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+runCode(5)
+var aceeditor5 = newAceEditor("aceeditor5", 'knitCode5');
+$("#clear5").click(function(e){
+  e.preventDefault();
+  $("#knitResult5").html("");
+}); 
+});
+</script>
+
+
+
+        
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Control Structures</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>If-Then-Else</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The <code>if-then-else</code> </p>
+
+<pre><code class="r">day = &quot;Sunday&quot;
+if (day == &#39;Sunday&#39;){
+  print(&quot;Sunday&quot;)
+} else {
+ print(&quot;Not a Sunday&quot;)
+}
+[1] &quot;Sunday&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Loops</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>For Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A <code>for</code> loop can be used to carry out a computational task repeatedly.</p>
+
+<pre><code class="r">x &lt;- c(1, 2, 3, 4, 5)
+mysum = 0
+for (i in 1:5){
+  mysum = mysum + x[i]
+}
+mysum
+[1] 15
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:lightgreen;">
+  <hgroup>
+    <h2>While Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:lightblue;">
+  <hgroup>
+    <h2>Repeat Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="quiz" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Question</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-single well new">
+  <p>How many different ways can we pick <code>two</code> marbles from a bag containing <code>three</code> marbles, colored red, blue and green?</p>
+
+<ol>
+<li>3</li>
+<li><em>6</em></li>
+<li>9</li>
+</ol>
+
+  
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  <div class="quiz-explanation">
+    <style>
+.modal-body iframe {
+  height: 350px;
+}
+</style>
+
+<p>This is the answer. Does math work?</p>
+
+<p>\[\alpha = \beta\]</p>
+
+<iframe width="1280" height="720" src="http://www.youtube.com/embed/H9VYDGuxqGg" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="quiz" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Text Question</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text well" data-answer="10">
+  <p>This question requires a text input as answer. What is 5 + 5?</p>
+
+  <input type="text" class="quiz-answerbox">
+  <br/>
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  <div class="quiz-hint">
+    <p>Think addition!</p>
+
+  </div>
+  <div class="quiz-explanation">
+    <p>It is trivial</p>
+
+  </div>
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>What is Probability?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Probability is the </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Birthday Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="fill nobackground" id="slide-22" style="background:url(http://goo.gl/MfFa);">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Hypothesise</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Let us start by hypothesizing what the answer could be.</p>
+
+<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dGdlYzZNVGdRRWIyQ1pxSkFtYmhDbEE6MQ" width="760" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Simulate</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We will use simulation to answer our question. <a href="http://www-stat.stanford.edu/%7Esusan/surprise/Birthday.html">Click here</a> and open in a new tab.</p>
+
+<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFJoSWdTb0I1ZWIxOEpGYWRWcC1nUUE6MA" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Use R</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>There are two built in functions <code>pbirthday</code> and <code>qbirthday</code> which calculate the probability of a coincidence and the minimum number of people required for a given probability of coincidence. You can get more details by typing <code>? pbirthday</code> in <code>RStudio</code></p>
+
+<p>Here are some hints on how to apply these functions</p>
+
+<pre><code class="r">pbirthday(n = 60)                  # prob. at least two people share a bday
+pbirthday(n = 60, coincident = 3)  # prob. at least three people share a bday
+qbirthday(prob = 0.5, class = 365) # min. number required for a 50% prob. of common bday
+qbirthday(prob = 0.8, class = 30)  # min. number required for a 80% prob. of common month
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="quiz" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Question 1</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-single well new">
+  <p>What is the minimum number of people required for a 99% probability of a common birthday? Choose the closest possible answer.</p>
+
+<ol>
+<li>30</li>
+<li>40</li>
+<li><em>60</em></li>
+<li>&gt; 100</li>
+</ol>
+
+  
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <pre><code class="r">qbirthday(0.99, classes = 365)
+[1] 57
+</code></pre>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="quiz" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Question 2</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz-text well" data-answer="57">
+  <p>What is the minimum number of people required for a 99% probability of a common birthday?</p>
+
+  <input type="text" class="quiz-answerbox">
+  <br/>
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear">Clear</button>
+  
+  
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s Make a Deal</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>Motivate</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Should we base decisions on our intuition? Let&#39;s check your intuition to determine a probability with Monty Hall&#39;s Let&#39;s Make A Deal.</p>
+
+<p>Monty Hall&#39;s game show Let&#39;s Make A Deal was a popular seventies game show. Nearly the entire audience dresses up in costumes hoping that Monty Hall would select them out of the crowd and offer them a chance to win a fabulous prize. He might offer $100 for every paper clip in your possession! </p>
+
+<p>Here is the situation: Suppose you are given three doors to choose from. Behind one door there is a big prize (a car) and behind the other two, there are goats. Only Monty Hall knows which door has the prize. You are asked to select a door, and then Monty opens a different door, showing you a goat behind it. Then you are asked the big question: Do you want to stay with your original door, or switch to a different door? </p>
+
+<div class='alert alert-success'><p>
+Question: Do you have a higher chance of winning the prize if you stay with your first door selection, or switch to the remaining door?
+</p></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>Hypothesize</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Let us start by hypothesizing what the answer could be.</p>
+
+<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dDZJRzAxZzFYakxldXhhY0EyakUxNVE6MQ" width="760" height="510" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="fill" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Simulate</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe 
+  src = "http://graphics8.nytimes.com/packages/flash/science/20080408_GAME_FEATURE/game1.swf">
+</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>Ponder</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dDhsMmlVWk1sSEpPeDE4MU84WVRKRmc6MA" width="760" height="510" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-33" style="background:darkslategrey;">
+  <hgroup>
+    <h2>One Son Policy</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>Motivate</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In the early 1990’s China considered adopting a &quot;one son&quot; policy, to help reduce their birthrate by allowing families to keep having children until they had a son.  Under this plan a family has a child.  If it is a son, they stop having children.  If it is a daughter, they can try again. They can keep trying until they have a son and then they stop having children.</p>
+
+<p>In small groups, discuss the following questions:</p>
+
+<ol>
+<li>If a country adopted this “one son” policy, what would you expect the average number of children to be for a family, and why?</li>
+<li>What would you expect the ratio of boys to girls to be (more girls than boys, more boys than girls, equal numbers of girls and boys)? Why?</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>Think</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Working in teams, take a yogurt container that contains two slips of paper. One is labeled B for boy. One is labeled G for girl. You are going to randomly draw one slip of paper from the container and that will be the first child born in a simulated family. If you draw a B, then stop. Enter the data on the chart below. If it is a G, draw again. Keep drawing until you draw a B, then stop and enter the data on the chart below. Repeat this process for 5 simulated families.
+For example: GB, B, GGB, B, GB, etc.</p>
+
+<ol>
+<li> </li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Hypothesize</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dDZwbmhPakdfeDM0UTB1UUtMZExaOHc6MA" width="760" height="540" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Simulate</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dDRCckNxVmNPNEp4aHlTLV91cXdraFE6MQ" width="760" height="540" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark nobackground" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Flip Coins with R</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-39" style="background:;">
+  <hgroup>
+    <h2>Flipping a Coin</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We can use <code>R</code> to simulate the physical process of flipping a coin. You will need to install the <code>mosaic</code> package, which can be done by typing <code>install.packages(&#39;mosaic&#39;)</code> in <code>RStudio</code></p>
+
+<p>Let us start by flipping a coin 5 times</p>
+
+<pre><code class="r">rflip(5)
+Flipping 5 coins [ Prob(Heads) = 0.5 ] ...
+
+H T H H T
+
+Result: 3 heads.
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-40" style="background:;">
+  <hgroup>
+    <h2>Flipping Multiple Times</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We can flip a coin 5 times and automatically count the number of heads tossed</p>
+
+<pre><code class="r">nflip(5)
+[1] 1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-41" style="background:;">
+  <hgroup>
+    <h2>Flipping a Coin 500 times</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We can now repeat the process of flipping 5 coins, 500 times and plot a histogram of the distribution.</p>
+
+<pre><code class="r">do500 = do(500) * rflip(5)                  # flip 5 coins, 500 times
+histogram(~ heads, data = do500, nint = 6)  # plot a histogram of number of heads
+</code></pre>
+
+<p><img src="assets/fig/flip-5-500.png" alt="plot of chunk flip-5-500"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note">
+    <section>
+      <p>You can type <code>View(do500)</code> in <code>RStudio</code> if you want to take a look at the raw data generated.</p>
+
+    </section>
+  </aside>
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script src='../../libraries/widgets/bootstrap/js/bootstrap.min.js'></script>
+<script src="../../libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script>  
+$(function (){ 
+  $("#example").popover(); 
+  $("[rel='tooltip']").tooltip(); 
+});  
+</script>  
+<script src='../../libraries/widgets/quiz/js/jquery.quiz.js'></script>
+<script src='../../libraries/widgets/quiz/js/mustache.min.js'></script>
+<script src='../../libraries/widgets/quiz/js/quiz-app.js'></script>
+
+<script type='text/javascript' src='../../libraries/widgets/ace/js/ace.js'></script>
+<script type='text/javascript' src='../../libraries/widgets/opencpu/js/opencpu.js'></script>
+
+<script src="../../libraries/widgets/popcornjs/js/popcorn-complete.min.js"></script>
+<script src="../../libraries/widgets/popcornjs/js/popcorn-custom.js"></script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="../../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+
+<script>
+$(document).ready(function(){
+  // $("pre:has(code)").addClass('build');
+  // $("p:has(img)").addClass('build')
+   // var pop = Popcorn.vimeo("player", "http://player.vimeo.com/video/41823197");
+  // var mytimings = [{"slide":1,"time":1361386121505},{"time":15660,"slide":2,"action":"gotoSlide"},{"time":67211,"slide":3,"action":"gotoSlide"},{"time":71362,"slide":3,"action":"nextSlide"},{"time":81665,"slide":3,"action":"nextSlide"},{"time":92802,"slide":3,"action":"nextSlide"},{"time":100178,"slide":3,"action":"nextSlide"}] ;
+  //  syncSlides(mytimings, pop);
+});
+</script>
+<script src='https://grockit.com/answers/scripts/grockitize.js' id='link_grockitizer'>
+</script>
+<script>g('public');</script></html>

@@ -1,0 +1,4 @@
+nvd3:
+  css: css/nv.d3.css
+  jshead: [js/d3.v2.min.js, "http://nvd3.org/nv.d3.js", js/fisheye.js]
+  extensions: js/fisheye.js

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slidify</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Slidify">
+  <meta name="author" content="Ramnath Vaidyanathan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="../../libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="../../libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="../../libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="../../libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="./assets/css/custom.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script> 
+  <script data-main="../../libraries/frameworks/io2012/js/slides" 
+    src="../../libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='400px' src="assets/img/slidify_logo.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/slidify_logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Slidify</h1>
+    <h2>Reproducible HTML5 Slides</h2>
+    <p>Ramnath Vaidyanathan<br/>Assistant Professor, McGill</p>
+  </hgroup>
+    <a href="https://github.com/ramnathv/slidify/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Test Features of Slidify</h2>
+  </hgroup>
+  <article data-timings="10">
+    <style>
+body {
+  background-color: #000;
+}
+.quiz-option label{
+  display: inline;
+  font-size: 1em;
+}
+ul.nav li::before { content: ""; }  
+ul.nav li{ font-size: 18px; line-height: 24px;}
+</style>
+
+<ol>
+<li>Mathjax</li>
+<li>Layouts</li>
+<li>Backgrounds</li>
+<li>Widgets</li>
+<li>Overlays</li>
+<li>Metadata</li>
+<li>Embeds</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="YAML" id="slide-2" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+<div class="masthead">
+  <h2 class="muted">Slidify</h2>
+  <ul class="nav nav-pills pull-right">
+    <li class='active'><a href="#">Home</a></li>
+    <li class=''><a href="about.html">About</a></li>
+  </ul>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Nested Lists</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>Thing 1</p>
+
+<ul>
+<li>Point 1</li>
+<li>Point 2</li>
+</ul></li>
+<li><p>Thing 2</p>
+
+<ul>
+<li>Point 3</li>
+<li>Point 4</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="slide-4" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+<div class="tabbable">
+  <ul class="nav nav-pills">
+    <li class="tab active"><a href="#problem" data-toggle="pill">problem</a></li>
+    <li class="tab "><a href="#questions" data-toggle="pill">questions</a></li>
+    <li class="tab "><a href="#variables" data-toggle="pill">variables</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="problem">
+      <p>Tab1</p>
+
+    </div>
+    <div class="tab-pane fade in " id="questions">
+      <p>Tab2</p>
+
+    </div>
+    <div class="tab-pane fade in " id="variables">
+      <p>Tab3</p>
+
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Setext Header</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This slide shows a Setext style header.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Tables</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Mardown tables contain <code>---</code> and should not be interpreted as separator.</p>
+
+<table><thead>
+<tr>
+<th>Column X</th>
+<th>Column Y</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Row 1</td>
+<td>Row 1</td>
+</tr>
+<tr>
+<td>Row 2</td>
+<td>Row 2</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:#662c91;">
+  <hgroup>
+    <h2>Animated List, Ordered</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This list should be animated</p>
+
+<ol class = "build incremental">
+<li>Point 1</li>
+<li>Point 2</li>
+<li>Point 3</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Animated List, Unordered</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This list should be animated</p>
+
+<ul class = "build incremental">
+<li>Point 1</li>
+<li>Point 2</li>
+<li>Point 3</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Mathjax</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>\[
+\begin{aligned}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\   \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0 \end{aligned}
+\]
+<br />
+\[
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
+\frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0
+\end{vmatrix}
+\]</p>
+
+<div class='source'>
+  Source: <a href='http://www.subtlepatterns.com'>Background from SubtlePatterns</a>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Layouts, Custom Metadata</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is a slide with a two column layout.</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p>Column 1</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>Column 2</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:#EEE;">
+  <hgroup>
+    <h2>Background Color</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This slide should have a subtle gray background.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Background Image</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This slide should have a background image.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Widgets: jQuery-Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>This is a multiple choice question</p>
+
+<ol>
+<li>Choice 1</li>
+<li><code>Choice 2</code></li>
+<li><em>Choice 3 (correct)</em></li>
+<li>Choice 4</li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>This is a hint</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>This is the explanation</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Widgets: Bootstrap</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>Blocks</strong></p>
+
+<div class="alert alert-info">
+ <p>This is an alert info block which should render in blue</p>
+</div>
+  
+
+<p><strong>Tooltips</strong></p>
+
+<p>This is to check out tooltips in bootstrap <a href="#" rel="tooltip" data-original-title="Default tooltip">you probably</a></p>
+
+<p><strong>Popover</strong></p>
+
+<p><a class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" id='example'>Click to toggle popover</a></p>
+
+<p><a id='example' data-content='Change directory doesn't actually change the directory. It changes the shell's idea of which directory we are in' data-original-title='Note'><pre>cd data</pre></a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>The font size and color needs some tweaking.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Highlighter: Highlight JS</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We can make this function more robust by adding a simple error checking statement to prevent illegal parameters from generating invalid results.</p>
+
+<pre><code class="r">qpareto &lt;- function(p, scale, loc) {
+    if ((scale &lt;= 0) | (loc &lt;= 0)) {
+        stop(&quot;&#39;qpareto&#39; parameters must be greater than zero.&quot;)
+    }
+    q &lt;- loc * (1 - p)^(-1/scale)
+    return(q)
+}
+</code></pre>
+
+<p>Entering a negative parameter now raises an exception, instead of an invalid result that could silently corrupt subsequent results.</p>
+
+<pre><code class="r">qpareto(0.4, 5, -1)
+</code></pre>
+
+<pre><code>## Error: &#39;qpareto&#39; parameters must be greater than zero.
+</code></pre>
+
+<p>We could improve this further by checking to ensure that <code>p</code> is a valid probability.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Check Chunk Execution</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(ggplot2)
+library(ggthemes)
+</code></pre>
+
+<pre><code>## Warning: package &#39;ggthemes&#39; was built under R version 2.15.3
+</code></pre>
+
+<pre><code class="r">qplot(wt, mpg, data = mtcars) + theme_solarized()
+</code></pre>
+
+<p><img src="figure/scplot.png" alt="plot of chunk scplot"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <pre><code class="r">library(ggplot2)
+library(ggthemes)
+qplot(wt, mpg, data = mtcars) + theme_solarized()
+</code></pre>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <p><q class='shout'>This is a shout</q></p>
+
+<p>I am checking key, <span class = 'key'>key</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="myslide" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <script>
+$('#myslide').on('slideenter', function(){
+  $(this).find('article')
+    .append('<iframe src="http://bl.ocks.org/mbostock/raw/1256572/"></iframe>')
+});
+$('#myslide').on('slideleave', function(){
+  $(this).find('iframe').remove();
+});
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Test Features of Slidify'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Slidify'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Nested Lists'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title=''>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Setext Header'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Tables'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Animated List, Ordered'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Animated List, Unordered'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Mathjax'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Layouts, Custom Metadata'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Background Color'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Background Image'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Widgets: jQuery-Quiz'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Widgets: Bootstrap'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Highlighter: Highlight JS'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Check Chunk Execution'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title=''>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title=''>
+         18
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="../../libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script src='../../libraries/widgets/bootstrap/js/bootstrap.min.js'></script>
+<script src="../../libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script>  
+$(function (){ 
+  $("#example").popover(); 
+  $("[rel='tooltip']").tooltip(); 
+});  
+</script>  
+<script src='../../libraries/widgets/quiz/js/jquery.quiz.js'></script>
+<script src='../../libraries/widgets/quiz/js/mustache.min.js'></script>
+<script src='../../libraries/widgets/quiz/js/quiz-app.js'></script>
+
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="../../libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+
+<script src='assets/js/app.js'></script 
+</html>

@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<title>{{{ page.title }}}</title>
+<meta name="description" content="{{{ page.description }}}">
+<meta name="author" content="{{{ page.author }}}">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+{{# page.bootstrap }}
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/{{page.bootstrap.theme}}/bootstrap.min.css">
+{{/ page.bootstrap }}
+<link rel="stylesheet" href="{{page.url.framework}}/css/reveal.min.css">
+<link rel="stylesheet" href="{{page.url.framework}}/css/theme/{{page.revealjs.theme}}.css" id="theme">
+<link rel="stylesheet" href="{{page.url.highlighter}}/css/{{page.hitheme}}.css" id="theme">
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
