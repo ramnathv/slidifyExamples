@@ -4,7 +4,7 @@ Slidify Example Presentations
 NOTE. These slides use the dev versions of Slidify and SlidifyLibraries. 
 
 1. [Google IO2012](http://ramnathv.github.com/slidifyExamples/examples/io2012)
-2. [DeckJS]((http://ramnathv.github.com/slidifyExamples/examples/deckjs)
+2. [DeckJS](http://ramnathv.github.com/slidifyExamples/examples/deckjs)
 3. [RevealJS](http://ramnathv.github.com/slidifyExamples/examples/revealjs)
 4. [FlowtimeJS](http://ramnathv.github.com/slidifyExamples/examples/flowtime)
 5. [ImpressJS](http://ramnathv.github.com/slidifyExamples/examples/impressjs)
