@@ -519,8 +519,20 @@ qplot(wt, mpg, data = mtcars)
     history: true,
     center: true,
     theme: Reveal.getQueryHash().theme || 'solarized', 
-    transition: Reveal.getQueryHash().transition || 'none', 
+    transition: Reveal.getQueryHash().transition || 'none',
+    multiplex: {
+        // Example values. Generate your own.
+        secret: null, // null so the clients do not have control of the master presentation
+        id: '9f1249def8c33fef', // id, obtained from socket.io server
+        url: 'revealjs.jit.su:80' // Location of socket.io server
+    },
+
+    // Optional libraries used to extend on reveal.js
     dependencies: [
+        // other deps
+        {src: 'http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', 
+          async: true },
+        { src: './frameworks/revealjs/plugin/multiplex/client.js', async: true },
     // Cross-browser shim that fully implements classList -
     // https://github.com/eligrey/classList.js/
       { src: './frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
