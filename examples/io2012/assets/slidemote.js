@@ -53,6 +53,8 @@ var slidemote = (function(){
 				slideType = 'deckjs';
 			}else if(window.Flowtime){
 				slideType = 'flowtime';
+			}else if(window.slidedeck){
+				slideType = 'deckjs'
 			}
 
 			socket.on('slideType', function (data) {
@@ -84,10 +86,10 @@ var slidemote = (function(){
 					if(/goto/.test(data.code)){	
 
 						arg = parseInt(data.code,10);
-						data.code = "go";
+						data.code = "gotoSlide";
 					}
 
-					$.deck(data.code, arg)
+					window.slidedeck[data.code](arg);
 				}//end
 
 				//Flowtime
